@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Strike Method — Make your best trading decision, every time.</title>
-<meta name="description" content="The Strike Method (TSM) does the analysis before the open and while the market moves, so you know exactly what deserves your capital — ready for calls, ready for puts, watch, or avoid. Closed beta." />
+<title>The Strike Method — Decision intelligence for traders.</title>
+<meta name="description" content="The Strike Method (TSM) reviews the whole board — options and prediction markets — before you wake up, and hands you the few decisions that clear the bar. It answers one question: what deserves my attention? Closed beta." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -73,56 +73,61 @@
 
   /* hero */
   .hero{padding:78px 0 64px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(40px,5.4vw,62px);line-height:1.03;font-weight:700;letter-spacing:-.02em;margin:18px 0 22px}
+  .hero h1{font-size:clamp(40px,5.4vw,60px);line-height:1.04;font-weight:700;letter-spacing:-.02em;margin:18px 0 22px}
   .hero h1 .accent{color:var(--emerald)}
-  .lede{font-size:18px;color:#cfd6d1;max-width:30em}
+  .lede{font-size:18px;color:#cfd6d1;max-width:32em}
   .lede strong{color:var(--text);font-weight:600}
-  .sub{margin-top:14px;color:var(--muted);max-width:30em}
-  .built{margin-top:16px;color:var(--muted);font-style:italic;font-size:15px}
+  .sub{margin-top:14px;color:var(--muted);max-width:32em}
   .hero-cta{margin-top:30px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .cap{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
   .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
 
-  /* demo card */
+  /* demo card — the product VOICE, never fabricated results */
   .card{background:linear-gradient(180deg,var(--panel),#0a0f0d);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 30px 80px -40px rgba(0,0,0,.9)}
   .card-head{display:flex;align-items:center;justify-content:space-between;padding:4px 6px 14px}
   .card-head .t{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
   .chip{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--muted-2);border:1px solid var(--line-2);border-radius:20px;padding:4px 10px;text-transform:uppercase}
-  .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;border-radius:13px;border:1px solid var(--line);margin-bottom:10px;background:var(--panel-2)}
-  .row.calls{border-color:rgba(21,204,142,.30);box-shadow:inset 0 0 32px rgba(21,204,142,.06)}
-  .row.puts{border-color:rgba(239,81,81,.28);box-shadow:inset 0 0 32px rgba(239,81,81,.06)}
-  .tk{display:flex;flex-direction:column;gap:2px}
-  .tk .sym{font-weight:700;font-size:17px;letter-spacing:.02em}
-  .tk .state{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
-  .tk .why{font-size:12.5px;color:var(--muted)}
-  .state.up{color:var(--emerald)} .state.down{color:var(--red)} .state.flat{color:var(--muted)}
-  .score{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:16px;flex:0 0 auto;border:2px solid var(--line-2)}
-  .score.g{border-color:var(--emerald);color:var(--emerald);box-shadow:0 0 18px rgba(21,204,142,.25)}
-  .score.r{border-color:var(--red);color:var(--red);box-shadow:0 0 18px rgba(239,81,81,.22)}
-  .score.n{border-color:var(--line-2);color:var(--muted)}
-  .ticker{display:flex;gap:12px;align-items:flex-start;padding:13px 14px;border-radius:13px;background:rgba(224,164,58,.06);border:1px solid rgba(224,164,58,.20);margin-top:2px}
-  .ticker .time{font-family:"Space Mono",monospace;font-size:11px;color:var(--amber);white-space:nowrap}
-  .ticker .txt{font-size:13px;color:#cfd6d1}
+  .read{padding:6px 6px 4px}
+  .read .count{font-family:"Space Mono",monospace;font-size:12px;color:var(--muted);letter-spacing:.04em}
+  .read .headline{font-size:22px;font-weight:700;letter-spacing:-.01em;margin:8px 0 2px;line-height:1.2}
+  .read .headline .accent{color:var(--emerald)}
+  .row{display:flex;align-items:flex-start;gap:12px;padding:14px;border-radius:13px;border:1px solid var(--line);margin-top:12px;background:var(--panel-2)}
+  .row .mk{width:8px;height:8px;border-radius:50%;margin-top:6px;flex:0 0 auto;background:var(--emerald);box-shadow:0 0 10px rgba(21,204,142,.5)}
+  .row .body .k{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .row .body .v{font-size:14px;color:var(--text);margin-top:3px}
+  .row .body .v span{color:var(--muted)}
+  .quiet-note{margin-top:12px;padding:13px 14px;border-radius:13px;background:rgba(224,164,58,.06);border:1px solid rgba(224,164,58,.20);font-size:13px;color:#cfd6d1}
+  .quiet-note b{color:var(--amber);font-weight:600}
 
   /* sections */
   section.block{padding:72px 0;border-top:1px solid var(--line)}
   .block h2{font-size:clamp(28px,3.4vw,38px);font-weight:700;letter-spacing:-.02em;margin:14px 0 0}
+  .block .kicker{margin-top:12px;color:var(--muted);max-width:46em}
   .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
   .feat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
   .feat .n{font-family:"Space Mono",monospace;font-size:12px;color:var(--emerald);letter-spacing:.1em}
   .feat h3{font-size:18px;margin:12px 0 8px;font-weight:600}
   .feat p{color:var(--muted);font-size:14.5px}
-  .states-line{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
-  .pill{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:8px 13px;border-radius:9px;border:1px solid var(--line-2);color:var(--muted)}
-  .pill.c{color:var(--emerald);border-color:rgba(21,204,142,.4)}
-  .pill.p{color:var(--red);border-color:rgba(239,81,81,.4)}
+
+  /* two products */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+  .prod{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .prod .pk{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--emerald)}
+  .prod h3{font-size:20px;margin:10px 0 6px;font-weight:600}
+  .prod p{color:var(--muted);font-size:14.5px}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .flow span{font-family:"Space Mono",monospace;font-size:11.5px;letter-spacing:.06em;color:var(--text);border:1px solid var(--line-2);border-radius:8px;padding:6px 10px;background:var(--bg-2)}
+  .flow span.sep{border:0;background:none;color:var(--muted-2);padding:6px 2px}
 
   /* access / form */
   #access{padding:74px 0 84px;border-top:1px solid var(--line);background:radial-gradient(120% 80% at 50% 0%,rgba(21,204,142,.06),transparent 60%)}
   .access-card{max-width:560px;margin:0 auto;background:linear-gradient(180deg,var(--panel),#0a0f0d);border:1px solid var(--line-2);border-radius:20px;padding:34px 30px;text-align:center;box-shadow:0 40px 100px -50px rgba(0,0,0,.9)}
   .access-card h2{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:14px 0 8px}
   .access-card .sub{margin:0 auto;color:var(--muted);max-width:36em}
-  form.beta{margin-top:24px;display:flex;flex-direction:column;gap:12px;text-align:left}
+  .price{display:inline-flex;align-items:baseline;gap:8px;margin-top:18px;font-family:"Space Mono",monospace}
+  .price .amt{font-size:22px;color:var(--text);font-weight:700}
+  .price .per{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  form.beta{margin-top:22px;display:flex;flex-direction:column;gap:12px;text-align:left}
   .field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500}
   .field input{
     width:100%;background:var(--bg-2);border:1px solid var(--line-2);border-radius:11px;
@@ -139,13 +144,19 @@
   .formerr{display:none;color:var(--red);font-size:13.5px;text-align:center;margin-top:10px}
 
   footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted-2);font-size:13px}
-  .foot-in{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .legal{max-width:48em}
+  .foot-in{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .legal{max-width:44em}
+  .legal a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+  .legal a:hover{color:var(--emerald)}
+  details.disc{margin-top:14px;max-width:52em}
+  details.disc summary{cursor:pointer;color:var(--muted);font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  details.disc p{margin-top:10px;color:var(--muted-2);font-size:12.5px;line-height:1.6}
 
   @media (max-width:860px){
     .hero{grid-template-columns:1fr;gap:40px;padding:54px 0 48px}
     .nav-links a:not(.btn){display:none}
     .grid3{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important;animation:none!important}}
   :focus-visible{outline:2px solid var(--emerald);outline-offset:2px;border-radius:4px}
@@ -168,7 +179,7 @@
     </a>
     <nav class="nav-links">
       <a href="#how">How it works</a>
-      <a href="#access">Access</a>
+      <a href="#products">Two products</a>
       <a href="#access" class="btn btn-primary js-focus">Request beta access</a>
     </nav>
   </div>
@@ -178,80 +189,90 @@
   <!-- HERO -->
   <section class="wrap hero">
     <div>
-      <span class="eyebrow">For active options traders · Closed beta</span>
-      <h1>Make your best trading decision, <span class="accent">every time.</span></h1>
-      <p class="lede"><strong>The Strike Method (TSM)</strong> does the analysis before the open and while the market moves, so you know exactly what deserves your capital — <strong>ready for calls, ready for puts, watch, or avoid.</strong></p>
-      <p class="sub">Over time, it makes you a more prepared, confident, and disciplined trader.</p>
-      <p class="built">Built by an options trader who was spending two hours a night doing this herself.</p>
+      <span class="eyebrow">Decision intelligence · Closed beta</span>
+      <h1>What deserves your <span class="accent">attention</span> today?</h1>
+      <p class="lede"><strong>The Strike Method</strong> is decision intelligence for traders. Before you wake up, it reviews the whole board — <strong>options and prediction markets</strong> — and hands you the few decisions that actually clear the bar.</p>
+      <p class="sub">It answers one question — <strong>what deserves my attention?</strong> — and eliminates almost everything you'd have analyzed yourself. Some mornings that's two decisions. Some mornings it's none, and an honest quiet day is the finding, not a failure.</p>
       <div class="hero-cta">
         <a href="#access" class="btn btn-primary btn-lg js-focus">Request beta access</a>
         <span class="cap"><span class="dot"></span> Access is capped while in closed beta.</span>
       </div>
     </div>
 
-    <!-- DEMO CARD -->
-    <div class="card" aria-label="Example market read (static demo)">
+    <!-- DEMO CARD: the product voice, clearly an example — never fabricated results -->
+    <div class="card" aria-label="Example of how a morning reads (illustrative)">
       <div class="card-head">
-        <span class="t">Today's market</span>
-        <span class="chip">Static · Demo</span>
+        <span class="t">A morning read</span>
+        <span class="chip">Illustrative</span>
       </div>
-      <div class="row calls">
-        <div class="tk">
-          <span class="sym">AMD</span>
-          <span class="state up">▲ Ready for calls</span>
-          <span class="why">Calls above 112.40</span>
-        </div>
-        <div class="score g">91</div>
-      </div>
-      <div class="row puts">
-        <div class="tk">
-          <span class="sym">TSLA</span>
-          <span class="state down">▼ Ready for puts</span>
-          <span class="why">Puts below 242.00</span>
-        </div>
-        <div class="score r">91</div>
+      <div class="read">
+        <div class="count">Reviewed the whole board overnight.</div>
+        <div class="headline">A handful <span class="accent">deserve your capital</span> today.</div>
       </div>
       <div class="row">
-        <div class="tk">
-          <span class="sym">NFLX</span>
-          <span class="state flat">— Avoid</span>
-          <span class="why">No clean setup</span>
+        <span class="mk"></span>
+        <div class="body">
+          <div class="k">Options</div>
+          <div class="v">A complete plan — where to enter, where you're wrong, where you take profit, when to exit.</div>
         </div>
-        <div class="score n">38</div>
       </div>
-      <div class="ticker">
-        <span class="time">10:42a · what changed</span>
-        <span class="txt">NVDA lost VWAP, downgraded to <strong>WATCH</strong></span>
+      <div class="row">
+        <span class="mk"></span>
+        <div class="body">
+          <div class="k">Prediction markets</div>
+          <div class="v">A complete thesis — the read, the conviction to monitor, and what would change it.</div>
+        </div>
+      </div>
+      <div class="quiet-note"><b>Some mornings:</b> nothing clears the bar. Standing down is a position — and TSM will say so.</div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="wrap block">
+    <span class="eyebrow">How it works</span>
+    <h2>One question, answered.</h2>
+    <p class="kicker">TSM is a decision-intelligence engine, not a signal feed. It does the analysis so you walk in with a shortlist instead of a blank chart.</p>
+    <div class="grid3">
+      <div class="feat">
+        <span class="n">01</span>
+        <h3>It reviews the whole board</h3>
+        <p>Every session, TSM works through options and prediction markets — a large universe of instruments — before you're even awake.</p>
+      </div>
+      <div class="feat">
+        <span class="n">02</span>
+        <h3>It hands you the few that clear the bar</h3>
+        <p>Each one arrives complete: an options plan you can act on, or a prediction-market thesis you can hold — never a bare number.</p>
+      </div>
+      <div class="feat">
+        <span class="n">03</span>
+        <h3>It tells you when to stand down</h3>
+        <p>The hardest call is doing nothing. When nothing deserves your capital, TSM says so plainly. An honest quiet day is a feature, not a bug.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHAT TSM DOES -->
-  <section id="how" class="wrap block">
-    <span class="eyebrow">What TSM does</span>
-    <h2>The analysis, done for you.</h2>
-    <div class="grid3">
-      <div class="feat">
-        <span class="n">01</span>
-        <h3>A read before the open</h3>
-        <p>Every morning, TSM scores a curated set of names and tells you the market environment — so you walk in with a plan instead of a blank chart.</p>
+  <!-- TWO PRODUCTS -->
+  <section id="products" class="wrap block">
+    <span class="eyebrow">Two products, one engine</span>
+    <h2>Options and prediction markets.</h2>
+    <p class="kicker">One market-agnostic engine, two complete workflows. TSM prepares the decision; you make it.</p>
+    <div class="two">
+      <div class="prod">
+        <div class="pk">Options</div>
+        <h3>Complete trade plans</h3>
+        <p>From the setup that deserves attention to the exit — every plan carries its own entry, invalidation, targets, and management.</p>
+        <div class="flow">
+          <span>Discover</span><span class="sep">→</span><span>Enter</span><span class="sep">→</span><span>Manage</span><span class="sep">→</span><span>Exit</span>
+        </div>
       </div>
-      <div class="feat">
-        <span class="n">02</span>
-        <h3>Updates while it moves</h3>
-        <p>When structure shifts intraday — a level lost, a setup invalidated — TSM updates the read and tells you what changed and why.</p>
+      <div class="prod">
+        <div class="pk">Prediction markets</div>
+        <h3>Complete theses</h3>
+        <p>From the event that's worth a view to resolution — every thesis carries its read, the conviction to monitor, and what would change it.</p>
+        <div class="flow">
+          <span>Discover</span><span class="sep">→</span><span>Commit</span><span class="sep">→</span><span>Monitor conviction</span><span class="sep">→</span><span>Resolve</span>
+        </div>
       </div>
-      <div class="feat">
-        <span class="n">03</span>
-        <h3>A discipline layer, not just a signal</h3>
-        <p>TSM is built to make you a more disciplined trader over time — including the hardest call, when the right move is to stand down.</p>
-      </div>
-    </div>
-    <div class="states-line" id="engine" aria-label="The four states">
-      <span class="pill c">Ready for calls</span>
-      <span class="pill p">Ready for puts</span>
-      <span class="pill">Watch</span>
-      <span class="pill">Avoid</span>
     </div>
   </section>
 
@@ -263,6 +284,7 @@
           <span class="eyebrow">Closed beta</span>
           <h2>Request beta access</h2>
           <p class="sub">Access is capped while we're in closed beta. Leave your email and we'll reach out when a spot opens.</p>
+          <div class="price"><span class="amt">$100</span><span class="per">/ month · closed beta</span></div>
 
           <form class='beta' id='betaForm' method='POST' name='beta'>
             <input type="hidden" name="form-name" value="beta" />
@@ -278,13 +300,13 @@
             </div>
             <div class="field">
               <label for="trades">What do you trade? <span style="color:var(--muted-2)">(optional)</span></label>
-              <input id="trades" type="text" name="trades" placeholder="e.g. 0DTE SPY, single-name calls" />
+              <input id="trades" type="text" name="trades" placeholder="e.g. single-name options, event markets" />
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg">Request beta access</button>
             <p class="formerr" id="formErr">Something went wrong — please try again, or email us directly.</p>
           </form>
-          <p class="formnote">The Strike Method is an educational tool, not financial advice.</p>
+          <p class="formnote">The Strike Method is an educational decision-support tool, not financial advice.</p>
         </div>
 
         <div class="success" id="successView">
@@ -298,9 +320,15 @@
 </main>
 
 <footer>
-  <div class="wrap foot-in">
-    <span class="brand"><span class="mark">▣</span><span class="name">The Strike Method</span></span>
-    <span class="legal">© 2026 The Strike Method. Educational tool, not financial advice. Trading involves risk of loss.</span>
+  <div class="wrap">
+    <div class="foot-in">
+      <span class="brand"><span class="mark">▣</span><span class="name">The Strike Method</span></span>
+      <span class="legal">© 2026 The Strike Method. Decision intelligence, not financial advice. Trading involves substantial risk of loss. <a href="#disclaimer">Risk disclaimer</a></span>
+    </div>
+    <details class="disc" id="disclaimer">
+      <summary>Risk disclaimer</summary>
+      <p>The Strike Method is an educational decision-support tool. It does not provide personalized investment advice, and nothing on this site is a recommendation to buy or sell any security, contract, or event outcome. Trading options and prediction markets involves substantial risk of loss and is not suitable for every investor. Past preparation does not guarantee any result; TSM makes no performance claims. You are solely responsible for your own decisions. During closed beta, features and availability may change.</p>
+    </details>
   </div>
 </footer>
 
