@@ -717,6 +717,24 @@
     });
   });
 
+  // Center Stock Exposure Map on NVIDIA node when scrollable (mobile)
+  (function(){
+    var wrap = document.querySelector('.tsm-scroll-wrap');
+    if(!wrap) return;
+    var svg = wrap.querySelector('svg.tsm-svg');
+    function centerOnNvidia(){
+      if(wrap.scrollWidth > wrap.clientWidth){
+        // NVIDIA is at x=392 in viewBox 0 0 760 490
+        // Center it in the visible viewport
+        var nvidiaX = (392 / 760) * wrap.scrollWidth;
+        wrap.scrollLeft = Math.max(0, nvidiaX - wrap.clientWidth / 2);
+      }
+    }
+    // Run after layout settles
+    setTimeout(centerOnNvidia, 300);
+    window.addEventListener('load', function(){ setTimeout(centerOnNvidia, 200); });
+  })();
+
   // Capture UTM parameters and referrer
   (function(){
     var params=new URLSearchParams(window.location.search);
