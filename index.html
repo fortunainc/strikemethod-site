@@ -7,14 +7,27 @@
 <meta name="description" content="The Strike Method filters options, stocks, and market evidence into a small number of complete decisions — what deserves your capital, where the risk is, and when standing down can protect it. Closed beta." />
 <meta name="theme-color" content="#070908" />
 <!-- social preview -->
+<link rel="canonical" href="https://getstrikemethod.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Strike Method" />
 <meta property="og:title" content="The Strike Method — A few decisions worth your money." />
 <meta property="og:description" content="Filters options, stocks, and market evidence into a small number of complete decisions — what deserves your capital, where the risk is, and when to stand down. Closed beta." />
 <meta property="og:url" content="https://getstrikemethod.com/" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://getstrikemethod.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Strike Method — A few decisions worth your money. Closed beta." />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="The Strike Method — A few decisions worth your money." />
 <meta name="twitter:description" content="Filters the market into a small number of complete decisions: what deserves your capital, where the risk is, and when to stand down. Closed beta." />
+<meta name="twitter:image" content="https://getstrikemethod.com/og-image.png" />
+<meta name="twitter:image:alt" content="The Strike Method — A few decisions worth your money. Closed beta." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"The Strike Method","url":"https://getstrikemethod.com","description":"Filters the market into a small number of complete decisions. Closed beta.","slogan":"A few decisions worth your money."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"The Strike Method","url":"https://getstrikemethod.com"}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -152,30 +165,36 @@
   .notrade{margin-top:12px;padding:12px 14px;border-radius:12px;border:1px solid var(--line-2);background:var(--bg-2);font-size:13px;color:#cfd6d1}
   .notrade b{color:var(--text)}
 
-  /* Stock Exposure Map */
-  .map-wrap{margin-top:30px;display:grid;grid-template-columns:1.35fr .9fr;gap:22px;align-items:stretch}
-  .map-stage{background:radial-gradient(120% 90% at 40% 20%,rgba(21,204,142,.05),transparent 60%),var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;position:relative;overflow:hidden}
-  .map-stage .maptag{position:absolute;top:14px;right:14px;z-index:2}
-  .map-svg{width:100%;height:auto;display:block}
-  .node-box{fill:var(--panel-2);stroke:var(--line-2)}
-  .node-label{fill:var(--text);font-family:"Instrument Sans",sans-serif;font-weight:600}
-  .node-kind{fill:var(--muted);font-family:"Space Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
-  .edge{stroke:var(--line-2);fill:none}
-  .edge-shared{stroke:var(--amber);stroke-dasharray:4 4}
-  .edge-label{fill:var(--muted);font-family:"Space Mono",monospace}
-  .legend{display:flex;flex-wrap:wrap;gap:12px 16px;margin-top:6px;padding:10px 6px 2px}
-  .legend span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
-  .legend i{width:9px;height:9px;border-radius:3px;flex:0 0 auto}
-  .map-side{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column}
-  .map-side .sel{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--emerald)}
-  .map-side h3{font-size:20px;margin:6px 0 2px;font-weight:600}
-  .map-side .selsub{color:var(--muted);font-size:13px}
-  .drow{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13.5px}
-  .drow:last-of-type{border-bottom:0}
-  .drow .dk{color:var(--muted)}
-  .drow .dv{color:var(--text);text-align:right}
-  .srcchips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-  .srcchips span{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.05em;color:var(--muted);border:1px solid var(--line-2);border-radius:7px;padding:4px 8px}
+  /* Stock Exposure Map — founder-approved Option A visual (scoped) */
+  #tsm-capital-options{font-family:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,sans-serif;color:#edf3ef;background:radial-gradient(120% 90% at 40% 20%,rgba(21,204,142,.05),transparent 60%),var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;box-sizing:border-box;margin-top:30px}
+  #tsm-capital-options *{box-sizing:border-box}
+  #tsm-capital-options .tsm-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px}
+  #tsm-capital-options .tsm-kicker{font:500 11px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.18em;color:var(--emerald);text-transform:uppercase;margin-bottom:7px}
+  #tsm-capital-options h2.tsm-h2{font-size:22px;line-height:1.15;font-weight:500;margin:0}
+  #tsm-capital-options .tsm-shell{border:1px solid #23312c;background:#0a0f0d;border-radius:14px;overflow:hidden}
+  #tsm-capital-options .tsm-toolbar{display:flex;align-items:center;gap:9px;padding:10px 12px;border-bottom:1px solid #1d2925;background:#0c1210;flex-wrap:wrap}
+  #tsm-capital-options .tsm-title{font-weight:500;font-size:13px;margin-right:auto}
+  #tsm-capital-options .tsm-live{font:500 10px/1 "Space Mono",ui-monospace,monospace;color:#61e8aa;border:1px solid #285e47;padding:5px 8px;border-radius:6px}
+  #tsm-capital-options .tsm-search{font:400 11px/1 "Space Mono",ui-monospace,monospace;color:#87958f;background:#111a17;border:1px solid #293a34;border-radius:7px;padding:7px 10px;min-width:150px}
+  #tsm-capital-options .tsm-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(230px,.75fr);min-height:490px}
+  #tsm-capital-options .tsm-stage{position:relative;background:radial-gradient(circle at 50% 45%,rgba(24,78,59,.18),transparent 44%),#080c0b;overflow:hidden}
+  #tsm-capital-options svg.tsm-svg{display:block;width:100%;height:100%;min-height:490px}
+  #tsm-capital-options .tsm-inspector{border-left:1px solid #1d2925;background:#0d1412;padding:18px}
+  #tsm-capital-options .tsm-eyebrow{font:500 10px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#73847c;margin-bottom:8px}
+  #tsm-capital-options .tsm-company{font-size:21px;font-weight:500;margin-bottom:6px}
+  #tsm-capital-options .tsm-type{display:inline-block;color:#76b5ff;border:1px solid #31577e;padding:3px 7px;border-radius:5px;font:500 9px/1 "Space Mono",ui-monospace,monospace;text-transform:uppercase}
+  #tsm-capital-options .tsm-section{margin-top:20px;padding-top:14px;border-top:1px solid #24322d}
+  #tsm-capital-options .tsm-rel{padding:10px 0;border-bottom:1px solid #1c2824}
+  #tsm-capital-options .tsm-rel:last-child{border-bottom:0}
+  #tsm-capital-options .tsm-rel strong{display:block;font-size:13px;font-weight:500;margin-bottom:5px}
+  #tsm-capital-options .tsm-meta{font-size:11px;color:#8e9d96;line-height:1.45}
+  #tsm-capital-options .tsm-chip{display:inline-block;margin:7px 5px 0 0;padding:4px 7px;border-radius:5px;font:500 9px/1 "Space Mono",ui-monospace,monospace}
+  #tsm-capital-options .tsm-verified{color:#67e8a8;border:1px solid #256d4e;background:#0d2119}
+  #tsm-capital-options .tsm-inferred{color:#ffc34f;border:1px solid #76571f;background:#211b0d}
+  #tsm-capital-options .tsm-evidence{color:#9aa8a1;border:1px dashed #3b4a44}
+  #tsm-capital-options .tsm-legend{position:absolute;left:14px;bottom:13px;display:flex;gap:12px;flex-wrap:wrap;background:rgba(8,12,11,.92);border:1px solid #27362f;border-radius:8px;padding:8px 10px;font:400 10px/1.3 "Space Mono",ui-monospace,monospace;color:#8d9d95}
+  #tsm-capital-options .tsm-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}
+  #tsm-capital-options .tsm-note{position:absolute;left:14px;top:14px;font:500 10px/1.35 "Space Mono",ui-monospace,monospace;color:#d9aa39;background:#1b1507;border:1px solid #5f4717;border-radius:7px;padding:8px 10px;max-width:310px}
   .helps{margin-top:22px;border:1px solid var(--emerald-deep);border-radius:14px;padding:18px 20px;background:linear-gradient(180deg,rgba(21,204,142,.05),transparent 70%),var(--panel)}
   .helps h4{font-size:15px;color:var(--emerald);margin-bottom:8px;font-family:"Space Mono",monospace;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
   .helps p{color:#cfd6d1;font-size:14.5px}
@@ -243,7 +262,11 @@
 
   /* responsive */
   @media (max-width:960px){
-    .map-wrap{grid-template-columns:1fr}
+    #tsm-capital-options .tsm-head{align-items:flex-start;flex-direction:column}
+    #tsm-capital-options .tsm-grid{grid-template-columns:1fr}
+    #tsm-capital-options .tsm-inspector{border-left:0;border-top:1px solid #1d2925}
+    #tsm-capital-options svg.tsm-svg{min-height:410px}
+    #tsm-capital-options .tsm-search{display:none}
     .lane{grid-template-columns:1fr;gap:22px}
     .found{grid-template-columns:1fr}
   }
@@ -281,6 +304,12 @@
   <input type="text" name="name" />
   <input type="email" name="email" />
   <input type="text" name="trades" />
+  <input type="hidden" name="utm_source" />
+  <input type="hidden" name="utm_medium" />
+  <input type="hidden" name="utm_campaign" />
+  <input type="hidden" name="utm_content" />
+  <input type="hidden" name="utm_term" />
+  <input type="hidden" name="referrer" />
 </form>
 
 <header>
@@ -375,7 +404,7 @@
       <div class="feat">
         <span class="n">01</span>
         <h3>It filters out most of the market</h3>
-        <p>Thousands of names and contracts are reviewed and most are set aside. What is easy to find is rarely worth your capital; TSM is built to discard the noise before you ever see it.</p>
+        <p>TSM is being built to review a broad market and discard most of it. What is easy to find is rarely worth your capital; the product is designed to filter out the noise before you ever see it.</p>
       </div>
       <div class="feat">
         <span class="n">02</span>
@@ -385,7 +414,7 @@
       <div class="feat">
         <span class="n">03</span>
         <h3>It hands you a complete decision</h3>
-        <p>You get the setup, the risk, and what would change it — or an honest "nothing today." Every call is recorded before the outcome is known, so the record is judged, not the marketing.</p>
+        <p>You get the setup, the risk, and what would change it — or an honest "nothing today." The research process is designed to record every call before the outcome is known, so the record is judged, not the marketing.</p>
       </div>
     </div>
   </section>
@@ -471,79 +500,57 @@
     <h2>See what your stocks depend on.</h2>
     <p class="lead-line">A stock is not just a ticker. It depends on manufacturers, suppliers, customers, technologies, and regulations that don't show up in a normal portfolio list. When several holdings quietly depend on the <strong>same</strong> supplier, technology, or rule, a portfolio that looks diversified can carry concentrated risk.</p>
 
-    <div class="map-wrap">
-      <div class="map-stage">
-        <span class="chip maptag">Illustrative preview</span>
-        <svg class="map-svg" viewBox="0 0 640 470" role="img" aria-label="Stock Exposure Map: a chip company and the suppliers, technologies, customers, and regulations it depends on.">
-          <!-- edges -->
-          <g class="edge">
-            <path d="M300 235 L150 120"/>
-            <path d="M300 235 L140 350"/>
-            <path d="M300 235 L300 108"/>
-            <path d="M300 235 L300 372"/>
-            <path d="M300 235 L470 150"/>
-          </g>
-          <!-- shared-dependency edge (second holding -> same foundry) -->
-          <path class="edge edge-shared" d="M470 350 L150 120"/>
-          <!-- edge labels -->
-          <g class="edge-label" font-size="10.5">
-            <text x="205" y="170">makes its chips</text>
-            <text x="150" y="300">supplies memory</text>
-            <text x="312" y="180">capacity bottleneck</text>
-            <text x="312" y="315">buys the output</text>
-            <text x="378" y="188">limits its markets</text>
-            <text x="300" y="245" fill="#e0a43a">shared foundry</text>
-          </g>
-
-          <!-- dependency nodes -->
-          <!-- foundry / supplier -->
-          <g><rect class="node-box" x="70" y="92" width="160" height="52" rx="10" stroke="#e0a43a"/>
-            <text class="node-kind" x="82" y="112" font-size="9">Supplier · Foundry</text>
-            <text class="node-label" x="82" y="130" font-size="14">Contract chipmaker</text></g>
-          <!-- memory / supplier -->
-          <g><rect class="node-box" x="58" y="326" width="164" height="52" rx="10" stroke="#e0a43a"/>
-            <text class="node-kind" x="70" y="346" font-size="9">Supplier · Components</text>
-            <text class="node-label" x="70" y="364" font-size="14">High-bandwidth memory</text></g>
-          <!-- packaging / technology -->
-          <g><rect class="node-box" x="212" y="66" width="176" height="46" rx="10" stroke="#4bb6c4"/>
-            <text class="node-kind" x="224" y="84" font-size="9">Technology · Bottleneck</text>
-            <text class="node-label" x="224" y="101" font-size="14">Advanced packaging</text></g>
-          <!-- customer -->
-          <g><rect class="node-box" x="206" y="374" width="188" height="52" rx="10" stroke="#15cc8e"/>
-            <text class="node-kind" x="218" y="394" font-size="9">Customer · Demand</text>
-            <text class="node-label" x="218" y="412" font-size="14">Large cloud buyers</text></g>
-          <!-- regulation -->
-          <g><rect class="node-box" x="430" y="126" width="150" height="52" rx="10" stroke="#ef5151"/>
-            <text class="node-kind" x="442" y="146" font-size="9">Regulation</text>
-            <text class="node-label" x="442" y="164" font-size="14">Export rules</text></g>
-          <!-- second holding (shared dependency) -->
-          <g><rect class="node-box" x="404" y="326" width="176" height="52" rx="10"/>
-            <text class="node-kind" x="416" y="346" font-size="9">Your other holding</text>
-            <text class="node-label" x="416" y="364" font-size="14">A second chip stock</text></g>
-
-          <!-- center / selected stock -->
-          <g><rect x="222" y="206" width="156" height="60" rx="12" fill="#0e1411" stroke="#15cc8e" stroke-width="1.6"/>
-            <text class="node-kind" x="238" y="228" font-size="9" fill="#15cc8e">Selected stock</text>
-            <text class="node-label" x="238" y="250" font-size="18">Chip designer</text></g>
-        </svg>
+    <!-- STOCK EXPOSURE MAP — founder-approved Option A visual -->
+    <div id="tsm-capital-options">
+      <div class="tsm-head">
+        <div><div class="tsm-kicker">Stock Exposure Map</div><h2 class="tsm-h2">See what your stocks depend on.</h2></div>
       </div>
-
-      <div class="map-side">
-        <div class="sel">Selected stock</div>
-        <h3>Chip designer</h3>
-        <div class="selsub">What this holding leans on — and where it overlaps with the rest of your portfolio.</div>
-        <div style="margin-top:14px">
-          <div class="drow"><span class="dk">Depends on foundry</span><span class="dv">Contract chipmaker</span></div>
-          <div class="drow"><span class="dk">Key component</span><span class="dv">High-bandwidth memory</span></div>
-          <div class="drow"><span class="dk">Capacity bottleneck</span><span class="dv">Advanced packaging</span></div>
-          <div class="drow"><span class="dk">Main demand</span><span class="dv">Large cloud buyers</span></div>
-          <div class="drow"><span class="dk">Policy risk</span><span class="dv">Export rules</span></div>
-          <div class="drow"><span class="dk">Shared exposure</span><span class="dv" style="color:var(--amber)">Same foundry as a 2nd holding</span></div>
+      <section>
+        <div class="tsm-shell">
+          <div class="tsm-toolbar"><span class="tsm-title">Stock Exposure Map</span><span class="tsm-live">● SOURCE-CHECKED CONNECTIONS</span><span class="tsm-search">Search stock, company, or technology…</span></div>
+          <div class="tsm-grid">
+            <div class="tsm-stage">
+              <div class="tsm-note">PRODUCT PREVIEW · SEE THE SOURCE BEHIND EVERY CONNECTION</div>
+              <svg class="tsm-svg" viewBox="0 0 760 490" role="img" aria-label="NVIDIA relationship map showing incoming constraints and outgoing dependencies">
+                <defs><marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2fd886"/></marker><marker id="arrAi" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#dfa82f"/></marker></defs>
+                <g fill="none" stroke="#2fd886" stroke-width="2" opacity=".82" marker-end="url(#arrA)">
+                  <path d="M392 245 C478 225 500 94 581 90"/><path d="M392 245 C480 226 506 173 598 170"/><path d="M392 245 C490 245 520 250 612 250"/><path d="M392 245 C490 262 523 327 608 330"/><path d="M392 245 C476 280 503 405 585 410"/>
+                </g>
+                <path d="M171 180 C250 185 270 225 333 240" fill="none" stroke="#dfa82f" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrAi)"/>
+                <path d="M175 315 C246 305 273 270 333 250" fill="none" stroke="#4488d6" stroke-width="1.7" stroke-dasharray="3 4" marker-end="url(#arrA)"/>
+                <text x="118" y="88" fill="#71847b" font-size="11" font-family="ui-monospace" letter-spacing="2">INCOMING</text>
+                <g><circle cx="365" cy="245" r="45" fill="#17243a" stroke="#57a5ff" stroke-width="3"/><text x="365" y="251" text-anchor="middle" fill="#f2f6f4" font-size="15" font-weight="500">NVIDIA</text></g>
+                <g font-family="Inter" fill="#eef4f1" text-anchor="middle" font-weight="500">
+                  <circle cx="135" cy="180" r="39" fill="#1b1a14" stroke="#f09439" stroke-width="2"/>
+                  <text x="135" y="175" font-size="10.5"><tspan x="135">US EXPORT</tspan><tspan x="135" dy="14">CONTROLS</tspan></text>
+                  <circle cx="135" cy="315" r="34" fill="#142136" stroke="#57a5ff" stroke-width="2"/>
+                  <text x="135" y="319" font-size="10.5">SUPERMICRO</text>
+                  <circle cx="620" cy="90" r="39" fill="#15322f" stroke="#3fb6a8" stroke-width="2"/>
+                  <text x="620" y="85" font-size="10"><tspan x="620">ADVANCED</tspan><tspan x="620" dy="14">PACKAGING</tspan></text>
+                  <circle cx="630" cy="170" r="31" fill="#142136" stroke="#57a5ff" stroke-width="2"/>
+                  <text x="630" y="174" font-size="11">TSMC</text>
+                  <circle cx="646" cy="250" r="34" fill="#142136" stroke="#57a5ff" stroke-width="2"/>
+                  <text x="646" y="254" font-size="10.5">SAMSUNG</text>
+                  <circle cx="640" cy="330" r="31" fill="#142136" stroke="#57a5ff" stroke-width="2"/>
+                  <text x="640" y="334" font-size="11">MICRON</text>
+                  <circle cx="618" cy="410" r="33" fill="#142136" stroke="#57a5ff" stroke-width="2"/>
+                  <text x="618" y="414" font-size="10.5">SK HYNIX</text>
+                </g>
+                <g font-family="ui-monospace" font-size="9.5" text-anchor="middle">
+                  <g transform="translate(470 116)"><rect x="-39" y="-11" width="78" height="20" rx="6" fill="#0a100e" stroke="#2a3a34"/><text y="3" fill="#d8e4de">DEPENDS ON</text></g>
+                  <g transform="translate(485 174)"><rect x="-39" y="-11" width="78" height="20" rx="6" fill="#0a100e" stroke="#2a3a34"/><text y="3" fill="#d8e4de">DEPENDS ON</text></g>
+                  <g transform="translate(505 231)"><rect x="-48" y="-11" width="96" height="20" rx="6" fill="#0a100e" stroke="#2a3a34"/><text y="3" fill="#d8e4de">PURCHASES FROM</text></g>
+                  <g transform="translate(510 305)"><rect x="-48" y="-11" width="96" height="20" rx="6" fill="#0a100e" stroke="#2a3a34"/><text y="3" fill="#d8e4de">PURCHASES FROM</text></g>
+                  <g transform="translate(470 366)"><rect x="-48" y="-11" width="96" height="20" rx="6" fill="#0a100e" stroke="#2a3a34"/><text y="3" fill="#d8e4de">PURCHASES FROM</text></g>
+                  <g transform="translate(230 193)"><rect x="-43" y="-11" width="86" height="20" rx="6" fill="#0a100e" stroke="#5f4717"/><text y="3" fill="#f3c15b">RESTRICTED BY</text></g>
+                </g>
+              </svg>
+              <div class="tsm-legend"><span><i class="tsm-dot" style="background:#57a5ff"></i>company</span><span><i class="tsm-dot" style="background:#3fb6a8"></i>technology</span><span><i class="tsm-dot" style="background:#f09439"></i>regulation</span><span>solid = verified</span><span>dotted = inferred</span></div>
+            </div>
+            <aside class="tsm-inspector"><div class="tsm-eyebrow">Selected stock</div><div class="tsm-company">NVIDIA <span class="tsm-type">Company</span></div><div class="tsm-meta">See the companies, technologies, suppliers, and rules that could affect a stock — and inspect the source behind every connection.</div><div class="tsm-section"><div class="tsm-eyebrow">What this stock depends on</div><div class="tsm-rel"><strong>Advanced packaging</strong><div class="tsm-meta">Capacity dependency · source excerpt available</div><span class="tsm-chip tsm-verified">SOURCE CHECKED</span><span class="tsm-chip tsm-evidence">SEE SOURCE →</span></div><div class="tsm-rel"><strong>TSMC</strong><div class="tsm-meta">Manufacturing relationship · current company filing</div><span class="tsm-chip tsm-verified">SOURCE CHECKED</span><span class="tsm-chip tsm-evidence">SEE SOURCE →</span></div></div><div class="tsm-section"><div class="tsm-eyebrow">How this helps you</div><div class="tsm-meta">If several stocks in your portfolio depend on the same supplier, technology, or regulation, you may be taking more of the same risk than the ticker symbols suggest. This map makes those hidden connections visible before they surprise you.</div></div></aside>
+          </div>
         </div>
-        <div class="srcchips">
-          <span>Source: filings</span><span>Source: public disclosures</span><span>Traceable</span>
-        </div>
-      </div>
+      </section>
     </div>
 
     <div class="helps">
@@ -575,7 +582,7 @@
         <p>Losing and rejected candidates are kept as part of the evidence. Historical testing is not a promise of future results; the point is to find what survives and discard what doesn't.</p>
       </div>
     </div>
-    <p class="kicker" style="margin-top:22px">A method only earns a place in the product if it holds up out-of-sample and improves the decision. If it doesn't, it doesn't ship.</p>
+    <p class="kicker" style="margin-top:22px">The research process is designed to require that a method only earns a place in the product if it holds up out-of-sample and improves the decision. If it doesn't, it doesn't ship.</p>
   </section>
 
   <!-- SPORTS RESEARCH LANE -->
@@ -611,10 +618,10 @@
     <h2>Judge the process — not the pitch.</h2>
     <p class="kicker">TSM is being built in closed beta while its Options and Long-Term Stocks products build a forward record. It is designed to be judged by how it works, not by a promise.</p>
     <div class="trust-grid">
-      <div class="tcard"><div class="tmk">1</div><div><h4>The decision is recorded first</h4><p>Each call is written down before the outcome is known — so the record can be checked, not curated after the fact.</p></div></div>
+      <div class="tcard"><div class="tmk">1</div><div><h4>The decision is recorded first</h4><p>The research process is designed to write down each call before the outcome is known — so the record can be checked, not curated after the fact.</p></div></div>
       <div class="tcard"><div class="tmk">2</div><div><h4>Misses are not deleted</h4><p>Losing calls and rejected ideas stay in the record. A track record that only shows winners isn't one.</p></div></div>
       <div class="tcard"><div class="tmk">3</div><div><h4>Results include the real costs</h4><p>Fees, spreads, and realistic execution are part of the test — not stripped out to make a number look better.</p></div></div>
-      <div class="tcard"><div class="tmk">4</div><div><h4>A new method must beat the current one</h4><p>Nothing replaces what's already there unless it does better under the same test. Cleverness alone isn't enough.</p></div></div>
+      <div class="tcard"><div class="tmk">4</div><div><h4>A new method must beat the current one</h4><p>The research process is designed so nothing replaces what's already there unless it does better under the same test. Cleverness alone isn't enough.</p></div></div>
       <div class="tcard"><div class="tmk">5</div><div><h4>"No trade" is a real answer</h4><p>TSM can stand down. When nothing clears the bar, saying so plainly is the product working — not failing.</p></div></div>
       <div class="tcard"><div class="tmk">6</div><div><h4>History and live results stay separate</h4><p>What was tested on the past and what is being proven going forward are never blended into one number.</p></div></div>
     </div>
@@ -635,6 +642,12 @@
           <form class="beta" id="betaForm" method="POST" name="beta">
             <input type="hidden" name="form-name" value="beta" />
             <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <input type="hidden" name="utm_source" id="utm_source" />
+            <input type="hidden" name="utm_medium" id="utm_medium" />
+            <input type="hidden" name="utm_campaign" id="utm_campaign" />
+            <input type="hidden" name="utm_content" id="utm_content" />
+            <input type="hidden" name="utm_term" id="utm_term" />
+            <input type="hidden" name="referrer" id="referrer_field" />
 
             <div class="field">
               <label for="email">Email <span aria-hidden="true">*</span></label>
@@ -652,7 +665,7 @@
             <button type="submit" class="btn btn-primary btn-lg">Request beta access</button>
             <p class="formerr" id="formErr">Something went wrong — please try again, or email us directly.</p>
           </form>
-          <p class="formnote">The Strike Method is an educational decision-support tool, not financial advice.</p>
+          <p class="formnote">The Strike Method is an educational decision-support tool, not financial advice. Your email is used to contact you about beta access. See our <a href="/legal/privacy.html" style="color:var(--muted);text-decoration:underline">privacy policy</a> and <a href="/legal/terms.html" style="color:var(--muted);text-decoration:underline">terms</a>.</p>
         </div>
 
         <div class="success" id="successView">
@@ -669,7 +682,7 @@
   <div class="wrap">
     <div class="foot-in">
       <span class="brand"><span class="mark" aria-hidden="true">▣</span><span class="name">The Strike Method</span></span>
-      <span class="legal">© 2026 The Strike Method. An educational decision-support tool — not financial advice. Trading involves substantial risk of loss. <a href="#disclaimer">Risk disclaimer</a></span>
+      <span class="legal">© 2026 The Strike Method. An educational decision-support tool — not financial advice. Trading involves substantial risk of loss. <a href="/legal/terms.html">Terms</a> · <a href="/legal/privacy.html">Privacy</a> · <a href="#disclaimer">Risk disclaimer</a></span>
     </div>
     <details class="disc" id="disclaimer">
       <summary>Risk disclaimer</summary>
@@ -685,6 +698,20 @@
       setTimeout(function(){ var e=document.getElementById('email'); if(e) e.focus(); }, 420);
     });
   });
+
+  // Capture UTM parameters and referrer
+  (function(){
+    var params=new URLSearchParams(window.location.search);
+    var utm_source=params.get('utm_source')||'direct';
+    var utm_medium=params.get('utm_medium')||'';
+    var utm_campaign=params.get('utm_campaign')||'';
+    var utm_content=params.get('utm_content')||'';
+    var utm_term=params.get('utm_term')||'';
+    var referrer=document.referrer||'direct';
+    var set=function(id,val){var el=document.getElementById(id);if(el&&val)el.value=val;};
+    set('utm_source',utm_source);set('utm_medium',utm_medium);set('utm_campaign',utm_campaign);
+    set('utm_content',utm_content);set('utm_term',utm_term);set('referrer_field',referrer);
+  })();
 
   // Mobile menu: open/close with keyboard + focus + Escape + click-outside
   (function(){
