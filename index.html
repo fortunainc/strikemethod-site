@@ -178,6 +178,10 @@
   #tsm-capital-options .tsm-search{font:400 11px/1 "Space Mono",ui-monospace,monospace;color:#87958f;background:#111a17;border:1px solid #293a34;border-radius:7px;padding:7px 10px;min-width:150px}
   #tsm-capital-options .tsm-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(230px,.75fr);min-height:490px}
   #tsm-capital-options .tsm-stage{position:relative;background:radial-gradient(circle at 50% 45%,rgba(24,78,59,.18),transparent 44%),#080c0b;overflow:hidden}
+  #tsm-capital-options .tsm-scroll-wrap{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#285e47 #0a0f0d}
+  #tsm-capital-options .tsm-scroll-inner{min-width:720px;width:100%}
+  #tsm-capital-options .tsm-scroll-wrap:focus-visible{outline:2px solid var(--emerald);outline-offset:-2px}
+  #tsm-capital-options .tsm-swipe-hint{display:none}
   #tsm-capital-options svg.tsm-svg{display:block;width:100%;height:100%;min-height:490px}
   #tsm-capital-options .tsm-inspector{border-left:1px solid #1d2925;background:#0d1412;padding:18px}
   #tsm-capital-options .tsm-eyebrow{font:500 10px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:#73847c;margin-bottom:8px}
@@ -270,20 +274,12 @@
     .lane{grid-template-columns:1fr;gap:22px}
     .found{grid-template-columns:1fr}
   }
-  @media (max-width:820px){
-    .split{grid-template-columns:1fr;gap:26px}
-    .grid3{grid-template-columns:1fr}
-    .versus{grid-template-columns:1fr}
-    .trust-grid{grid-template-columns:1fr}
-    .plan-grid{grid-template-columns:1fr}
-  }
-  @media (max-width:760px){
+  /* Switch to hamburger nav below 920px to prevent tablet header crowding */
+  @media (max-width:920px){
     .nav-links{display:none}
     .hamb{display:flex}
-    .hero{grid-template-columns:1fr;gap:34px;padding:44px 0 44px}
-    .hero .card{order:2}
     /* mobile menu overlay */
-    .mobile-menu{display:block;position:fixed;inset:0;z-index:70;background:rgba(6,8,7,.86);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .2s}
+    .mobile-menu{display:block;position:fixed;inset:0;z-index:70;background:#060807;opacity:0;pointer-events:none;transition:opacity .2s}
     .mobile-menu.open{opacity:1;pointer-events:auto}
     .mm-panel{position:absolute;top:0;right:0;width:min(84vw,340px);height:100%;background:var(--bg-2);border-left:1px solid var(--line-2);padding:20px;display:flex;flex-direction:column;gap:6px;transform:translateX(100%);transition:transform .24s ease}
     .mobile-menu.open .mm-panel{transform:none}
@@ -292,6 +288,23 @@
     .mm-panel a{padding:14px 12px;border-radius:10px;color:var(--text);font-size:16px;border:1px solid transparent}
     .mm-panel a:hover,.mm-panel a:focus-visible{background:var(--panel);border-color:var(--line-2)}
     .mm-panel .btn-primary{margin-top:12px}
+  }
+  @media (max-width:820px){
+    .split{grid-template-columns:1fr;gap:26px}
+    .grid3{grid-template-columns:1fr}
+    .versus{grid-template-columns:1fr}
+    .trust-grid{grid-template-columns:1fr}
+    .plan-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;gap:34px;padding:44px 0 44px}
+    .hero .card{order:2}
+  }
+  /* Mobile Stock Exposure Map: horizontal scroll at readable width */
+  @media (max-width:760px){
+    #tsm-capital-options .tsm-scroll-inner{min-width:720px}
+    #tsm-capital-options svg.tsm-svg{min-height:460px;height:460px}
+    #tsm-capital-options .tsm-swipe-hint{display:block;text-align:center;font:500 10px/1.2 "Space Mono",ui-monospace,monospace;letter-spacing:.12em;color:#73847c;padding:6px 0 10px;text-transform:uppercase}
   }
   @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important;animation:none!important}}
   :focus-visible{outline:2px solid var(--emerald);outline-offset:2px;border-radius:4px}
@@ -511,7 +524,9 @@
           <div class="tsm-grid">
             <div class="tsm-stage">
               <div class="tsm-note">PRODUCT PREVIEW · SEE THE SOURCE BEHIND EVERY CONNECTION</div>
-              <svg class="tsm-svg" viewBox="0 0 760 490" role="img" aria-label="NVIDIA relationship map showing incoming constraints and outgoing dependencies">
+              <div class="tsm-scroll-wrap" role="region" aria-label="Stock Exposure Map — swipe horizontally to explore all connections" tabindex="0">
+                <div class="tsm-scroll-inner">
+                  <svg class="tsm-svg" viewBox="0 0 760 490" role="img" aria-label="NVIDIA relationship map showing incoming constraints and outgoing dependencies">
                 <defs><marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#2fd886"/></marker><marker id="arrAi" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#dfa82f"/></marker></defs>
                 <g fill="none" stroke="#2fd886" stroke-width="2" opacity=".82" marker-end="url(#arrA)">
                   <path d="M392 245 C478 225 500 94 581 90"/><path d="M392 245 C480 226 506 173 598 170"/><path d="M392 245 C490 245 520 250 612 250"/><path d="M392 245 C490 262 523 327 608 330"/><path d="M392 245 C476 280 503 405 585 410"/>
@@ -545,6 +560,9 @@
                   <g transform="translate(230 193)"><rect x="-43" y="-11" width="86" height="20" rx="6" fill="#0a100e" stroke="#5f4717"/><text y="3" fill="#f3c15b">RESTRICTED BY</text></g>
                 </g>
               </svg>
+                </div>
+              </div>
+              <div class="tsm-swipe-hint" aria-hidden="true">← Swipe to explore the map →</div>
               <div class="tsm-legend"><span><i class="tsm-dot" style="background:#57a5ff"></i>company</span><span><i class="tsm-dot" style="background:#3fb6a8"></i>technology</span><span><i class="tsm-dot" style="background:#f09439"></i>regulation</span><span>solid = verified</span><span>dotted = inferred</span></div>
             </div>
             <aside class="tsm-inspector"><div class="tsm-eyebrow">Selected stock</div><div class="tsm-company">NVIDIA <span class="tsm-type">Company</span></div><div class="tsm-meta">See the companies, technologies, suppliers, and rules that could affect a stock — and inspect the source behind every connection.</div><div class="tsm-section"><div class="tsm-eyebrow">What this stock depends on</div><div class="tsm-rel"><strong>Advanced packaging</strong><div class="tsm-meta">Capacity dependency · source excerpt available</div><span class="tsm-chip tsm-verified">SOURCE CHECKED</span><span class="tsm-chip tsm-evidence">SEE SOURCE →</span></div><div class="tsm-rel"><strong>TSMC</strong><div class="tsm-meta">Manufacturing relationship · current company filing</div><span class="tsm-chip tsm-verified">SOURCE CHECKED</span><span class="tsm-chip tsm-evidence">SEE SOURCE →</span></div></div><div class="tsm-section"><div class="tsm-eyebrow">How this helps you</div><div class="tsm-meta">If several stocks in your portfolio depend on the same supplier, technology, or regulation, you may be taking more of the same risk than the ticker symbols suggest. This map makes those hidden connections visible before they surprise you.</div></div></aside>
