@@ -725,9 +725,9 @@
     function centerOnNvidia(){
       if(wrap.scrollWidth > wrap.clientWidth){
         // NVIDIA is at x=392 in viewBox 0 0 760 490
-        // Center it in the visible viewport
+        // Position NVIDIA slightly right of center so left-side labels (RESTRICTED BY, etc.) remain visible
         var nvidiaX = (392 / 760) * wrap.scrollWidth;
-        wrap.scrollLeft = Math.max(0, nvidiaX - wrap.clientWidth / 2);
+        wrap.scrollLeft = Math.max(0, nvidiaX - wrap.clientWidth * 0.62);
       }
     }
     // Run after layout settles
