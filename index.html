@@ -239,9 +239,9 @@
   .access-card{max-width:560px;margin:26px auto 0;background:linear-gradient(180deg,var(--panel),#0a0f0d);border:1px solid var(--line-2);border-radius:20px;padding:34px 30px;text-align:center;box-shadow:0 40px 100px -50px rgba(0,0,0,.9)}
   .access-card h2{font-size:29px;font-weight:700;letter-spacing:-.02em;margin:12px 0 8px}
   .access-card .sub{margin:0 auto;color:var(--muted);max-width:38em}
-  .price{display:inline-flex;align-items:baseline;gap:8px;margin-top:16px;font-family:"Space Mono",monospace}
-  .price .amt{font-size:22px;color:var(--text);font-weight:700}
-  .price .per{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .price{display:block;margin-top:16px;font-family:"Space Mono",monospace}
+  .price .beta-label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .price .beta-note{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:var(--muted-2);font-family:inherit}
   form.beta{margin-top:22px;display:flex;flex-direction:column;gap:12px;text-align:left}
   .field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500}
   .field input{width:100%;background:var(--bg-2);border:1px solid var(--line-2);border-radius:11px;padding:13px 14px;color:var(--text);font-size:16px;font-family:inherit;transition:border-color .15s, box-shadow .15s}
@@ -655,7 +655,10 @@
         <div id="formView">
           <h2>See the decisions before access opens.</h2>
           <p class="sub">TSM is opening the beta in small, controlled groups while its Options and Long-Term Stocks products build a forward record. Join the waitlist for early access, product previews, and the first beta invitations.</p>
-          <div class="price"><span class="amt">$100</span><span class="per">/ month · closed beta</span></div>
+          <div class="price">
+            <span class="beta-label">Limited Founding Beta Invitations</span>
+            <span class="beta-note">Founding members will receive preferred beta pricing before public launch.</span>
+          </div>
 
           <form class="beta" id="betaForm" method="POST" name="beta">
             <input type="hidden" name="form-name" value="beta" />
