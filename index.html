@@ -315,6 +315,8 @@
     .tsm-grid{grid-template-columns:1fr}
     .tsm-stage{min-width:0;max-width:100%}
     .tsm-scroll-wrap{width:100%;max-width:100%;min-width:0}
+    .chip{white-space:normal;word-break:break-word}
+    .card-head>*{min-width:0}
   }
   @media (max-width:760px){
     .hero{grid-template-columns:1fr;gap:34px;padding:44px 0 44px}
@@ -785,7 +787,7 @@
   // Focus the email field when any "Request beta access" control is used
   document.querySelectorAll('.js-focus').forEach(function(a){
     a.addEventListener('click', function(){
-      setTimeout(function(){ var e=document.getElementById('email'); if(e) e.focus(); }, 420);
+      setTimeout(function(){ var e=document.getElementById('email'); if(e) e.focus({preventScroll:true}); }, 420);
     });
   });
 
