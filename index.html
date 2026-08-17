@@ -295,7 +295,7 @@
   @media (max-width:920px){
     .nav-links{display:none}
     .hamb{display:flex}
-    .mobile-menu{display:block;position:fixed;inset:0;z-index:70;background:#060807;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .2s,visibility 0s linear .2s}
+    .mobile-menu{display:block;position:fixed;inset:0;z-index:70;background:#060807;opacity:0;pointer-events:none;visibility:hidden;overflow:hidden;transition:opacity .2s,visibility 0s linear .2s}
     .mobile-menu.open{opacity:1;pointer-events:auto;visibility:visible;transition-delay:0s}
     .mm-panel{position:absolute;top:0;right:0;width:min(84vw,340px);height:100%;background:var(--bg-2);border-left:1px solid var(--line-2);padding:20px;display:flex;flex-direction:column;gap:6px;transform:translateX(100%);transition:transform .24s ease}
     .mobile-menu.open .mm-panel{transform:none}
