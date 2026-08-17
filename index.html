@@ -295,9 +295,9 @@
   @media (max-width:920px){
     .nav-links{display:none}
     .hamb{display:flex}
-    .mobile-menu{display:block;position:fixed;inset:0;z-index:70;background:#060807;opacity:0;pointer-events:none;visibility:hidden;overflow:hidden;transition:opacity .2s,visibility 0s linear .2s}
+    .mobile-menu{display:block;position:fixed;inset:0;z-index:70;background:#060807;opacity:0;pointer-events:none;visibility:hidden;overflow:hidden;contain:layout paint;transition:opacity .2s,visibility 0s linear .2s}
     .mobile-menu.open{opacity:1;pointer-events:auto;visibility:visible;transition-delay:0s}
-    .mm-panel{position:absolute;top:0;right:0;width:min(84vw,340px);height:100%;background:var(--bg-2);border-left:1px solid var(--line-2);padding:20px;display:flex;flex-direction:column;gap:6px;transform:translateX(100%);transition:transform .24s ease}
+    .mm-panel{position:absolute;top:0;right:0;width:min(84vw,340px);height:100%;background:var(--bg-2);border-left:1px solid var(--line-2);padding:20px;display:flex;flex-direction:column;gap:6px;transform:translateX(100%);transition:transform .24s ease;overflow:hidden}
     .mobile-menu.open .mm-panel{transform:none}
     .mm-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
     .mm-close{width:42px;height:42px;border:1px solid var(--line-2);border-radius:10px;background:transparent;color:var(--text);font-size:20px;cursor:pointer;display:grid;place-items:center}
