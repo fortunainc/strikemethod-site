@@ -666,11 +666,11 @@
   <section id="sports" class="wrap block">
     <span class="eyebrow">Sports Analysis</span>
     <h2>Most people react to a headline. TSM checks the variables that change the outcome.</h2>
-    <p class="lead-line">A team name or a price is not enough. TSM evaluates game context — probable starting pitchers, bullpen and team offense, park and venue, weather when available, home/away, market price and movement, liquidity, fees, and correlated exposure — then estimates whether the offered price leaves a real margin after costs. When the edge disappears, TSM says <strong>pass</strong>.</p>
+    <p class="lead-line">A team name or a price is not enough. TSM compares the factors its current MLB model can verify — probable starters, bullpen and team offense, park and home-field context, market price, liquidity, fees, and correlated exposure — to the price being offered. Separate diagnostics are now testing full lineups, transaction-based injury and late-scratch evidence, weather, and platoon fit before those inputs are allowed to influence an official decision.</p>
     <div class="split">
       <div class="copy">
         <p><strong>The investor's problem.</strong> Most people react to a headline, a team name, or a price. They miss the variables that can change the outcome — a late pitching change, weather, park factors, or a price that looks good until fees and liquidity eat the edge.</p>
-        <p><strong>What TSM evaluates.</strong> Probable starting pitchers and their recent form, bullpen strength, team offense, park and venue factors, weather when available, home/away context, market price and movement, liquidity, fees, and correlated exposure. Full batting lineups and an independent injury/late-scratch feed are planned but not yet tracked. TSM waits until key inputs are confirmed — it does not act on incomplete information.</p>
+        <p><strong>What the current official model evaluates.</strong> Probable starting pitchers and recent form, bullpen strength, team offense, park and home-field context, executable market price, liquidity, fees, and correlated exposure. Full lineups, transaction-based injury and late-scratch evidence, weather, and platoon fit are being validated in a separate diagnostic lane. They do not become official decision gates until prospective evidence proves the feeds are complete and reliable.</p>
         <p><strong>What you receive.</strong> A clear evaluation with the estimated probability, the market price, whether the difference is large enough to matter after costs, and a TAKE, WAIT, PASS, or NO_PLAY decision — with the reason recorded.</p>
         <p><strong>How that helps.</strong> You stop reacting to headlines and start evaluating whether the offered price actually leaves a margin. When it doesn't, TSM says pass — protecting your bankroll from bets that look good but disappear after costs.</p>
         <p style="color:var(--muted-2);font-size:13px;margin-top:18px">Currently active for MLB moneyline. Paper trading only — no real-money results. Additional sports and data sources are planned but not yet operational.</p>
@@ -696,7 +696,7 @@
             <div class="sc-f"><div class="sck">Edge after costs</div><div class="scv">1.8pp <small>· below 4pp threshold</small></div></div>
           </div>
 
-          <div class="sc-note"><b>Decision: WAIT.</b> Edge exists but does not clear the 4-point minimum after fees, slippage, and sizing. If both probable starters are confirmed and the edge holds, this moves to TAKE. If the edge compresses further, it becomes PASS.</div>
+          <div class="sc-note"><b>Decision: WAIT.</b> The estimated edge does not clear the full governed gate set after price, fees, slippage, liquidity, sizing, and required evidence checks. A TAKE is possible only if every official gate clears; otherwise the record remains WAIT, PASS, or NO_PLAY.</div>
 
           <div style="margin-top:14px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Game context evaluated</div>
           <div class="sc-factors">
@@ -704,12 +704,12 @@
             <div class="sc-factor"><span class="sf-dot"></span><div><strong>Bullpen strength</strong> — relief pitcher quality affects late-inning outcomes.</div></div>
             <div class="sc-factor"><span class="sf-dot"></span><div><strong>Team offense</strong> — batting performance and run production from season-to-date results.</div></div>
             <div class="sc-factor"><span class="sf-dot"></span><div><strong>Park factors</strong> — venue dimensions and scoring environment.</div></div>
-            <div class="sc-factor"><span class="sf-dot"></span><div><strong>Weather</strong> — wind, temperature, and precipitation affect run scoring.</div></div>
+            <div class="sc-factor"><span class="sf-dot amber"></span><div><strong>Weather</strong> <small>— now being validated in the separate diagnostic lane; not yet an official decision gate.</small></div></div>
             <div class="sc-factor"><span class="sf-dot"></span><div><strong>Home/away + rest</strong> — home-field advantage and rest-day adjustment when data is available.</div></div>
             <div class="sc-factor"><span class="sf-dot"></span><div><strong>Market price + liquidity</strong> — executable market ask price, per-contract fees, and conservative slippage. Never mid-price.</div></div>
             <div class="sc-factor"><span class="sf-dot"></span><div><strong>Correlated exposure</strong> — same-game markets collapsed to prevent double exposure.</div></div>
-            <div class="sc-factor"><span class="sf-dot amber"></span><div><strong>Lineup confirmation</strong> <small>— full batting lineups not yet tracked. Starting pitchers only. Future capability.</small></div></div>
-            <div class="sc-factor"><span class="sf-dot amber"></span><div><strong>Injury / late status changes</strong> <small>— not yet a separate tracking system. Probable-starter status implies some coverage. Future capability.</small></div></div>
+            <div class="sc-factor"><span class="sf-dot amber"></span><div><strong>Full lineup confirmation</strong> <small>— now being tested prospectively in the separate diagnostic lane; not yet an official decision gate.</small></div></div>
+            <div class="sc-factor"><span class="sf-dot amber"></span><div><strong>Injury / late-scratch evidence</strong> <small>— transaction-based evidence is now being tested prospectively in the separate diagnostic lane; not yet an official decision gate.</small></div></div>
           </div>
         </div>
       </div>
