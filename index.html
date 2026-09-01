@@ -262,9 +262,11 @@
   .price .beta-note{display:block;margin-top:6px;font-size:13px;line-height:1.5;color:var(--muted-2);font-family:inherit}
   form.beta{margin-top:22px;display:flex;flex-direction:column;gap:12px;text-align:left}
   .field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500}
-  .field input{width:100%;background:var(--bg-2);border:1px solid var(--line-2);border-radius:11px;padding:13px 14px;color:var(--text);font-size:16px;font-family:inherit;transition:border-color .15s, box-shadow .15s}
+  .field input,.field select{width:100%;background:var(--bg-2);border:1px solid var(--line-2);border-radius:11px;padding:13px 14px;color:var(--text);font-size:16px;font-family:inherit;transition:border-color .15s, box-shadow .15s}
   .field input::placeholder{color:var(--muted-2)}
-  .field input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(21,204,142,.16)}
+  .field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 19px) 19px,calc(100% - 14px) 19px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:40px}
+  .field select:invalid{color:var(--muted-2)}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(21,204,142,.16)}
   form.beta .btn-primary{width:100%;justify-content:center;margin-top:6px}
   .formnote{margin-top:14px;font-size:12.5px;color:var(--muted-2);text-align:center}
   .success{display:none;text-align:center;padding:10px 0}
@@ -336,6 +338,10 @@
   <input type="text" name="name" />
   <input type="email" name="email" />
   <input type="text" name="trades" />
+  <select name="primary_interest"><option value=""></option></select>
+  <select name="biggest_challenge"><option value=""></option></select>
+  <select name="current_tool_spend"><option value=""></option></select>
+  <input type="hidden" name="research_variant" />
   <input type="hidden" name="utm_source" />
   <input type="hidden" name="utm_medium" />
   <input type="hidden" name="utm_campaign" />
@@ -740,6 +746,7 @@
             <input type="hidden" name="utm_content" id="utm_content" />
             <input type="hidden" name="utm_term" id="utm_term" />
             <input type="hidden" name="referrer" id="referrer_field" />
+            <input type="hidden" name="research_variant" id="research_variant" value="site-control-2026-09" />
 
             <div class="field">
               <label for="email">Email <span aria-hidden="true">*</span></label>
@@ -750,8 +757,40 @@
               <input id="name" type="text" name="name" placeholder="First name" autocomplete="given-name" />
             </div>
             <div class="field">
-              <label for="trades">How do you invest? <span style="color:var(--muted-2)">(optional)</span></label>
-              <input id="trades" type="text" name="trades" placeholder="e.g. options, stocks, event markets" />
+              <label for="primary_interest">What do you want TSM to help with? <span aria-hidden="true">*</span></label>
+              <select id="primary_interest" name="primary_interest" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="options">Options decisions</option>
+                <option value="long_term">Long-term stock research</option>
+                <option value="sports">Sports and event-market analysis</option>
+                <option value="multiple">More than one</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="biggest_challenge">What is your biggest challenge? <span aria-hidden="true">*</span></label>
+              <select id="biggest_challenge" name="biggest_challenge" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="too_much_data">Too much data and too many signals</option>
+                <option value="complete_plan">Turning an idea into a complete plan</option>
+                <option value="trust">Knowing which tools or signals to trust</option>
+                <option value="discipline">Knowing when to pass or stand down</option>
+                <option value="track_record">Tracking what actually works over time</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="current_tool_spend">What do you currently spend on research tools? <span style="color:var(--muted-2)">(optional)</span></label>
+              <select id="current_tool_spend" name="current_tool_spend">
+                <option value="" selected>Select one</option>
+                <option value="0">$0 per month</option>
+                <option value="1_49">$1–$49 per month</option>
+                <option value="50_99">$50–$99 per month</option>
+                <option value="100_199">$100–$199 per month</option>
+                <option value="200_plus">$200+ per month</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="trades">Anything else about how you invest? <span style="color:var(--muted-2)">(optional)</span></label>
+              <input id="trades" type="text" name="trades" placeholder="e.g. swing options, long-term stocks, Kalshi" />
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg">Request beta access</button>
@@ -818,6 +857,7 @@
     var set=function(id,val){var el=document.getElementById(id);if(el&&val)el.value=val;};
     set('utm_source',utm_source);set('utm_medium',utm_medium);set('utm_campaign',utm_campaign);
     set('utm_content',utm_content);set('utm_term',utm_term);set('referrer_field',referrer);
+    set('research_variant',utm_content||'site-control-2026-09');
   })();
 
   // Mobile menu: open/close with keyboard + focus + Escape + click-outside
