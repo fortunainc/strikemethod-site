@@ -1,13 +1,13 @@
 # Current status
 
-Last reconciled: 2026-09-01 19:25 America/Los_Angeles
+Last reconciled: 2026-09-02 01:27 America/Los_Angeles
 
 ## Executive truth
 
 - Commercial demand is **not demonstrated** for Options, Capital, or Sports. No verified qualified-response, interview, product-usage, deposit, payment, or retention dataset is available in this workspace.
 - Current category-spend evidence is now established in all three lanes. Options has the best proposition-level pain alignment: overload, incomplete interpretation, discipline, and recordkeeping recur in public samples, while paid adjacent products span roughly $35–$99/month. This is still not TSM demand evidence.
-- The public marketing repository is authoritative for intended site source. Site `main` is now at `38d484a`; the research branch carries the same attribution fix at `97f76be`.
-- The live Netlify project `golden-swan-85f1de` was manually deployed on 2026-09-01. Netlify recognizes one active `beta` form and preserved the existing aggregate count of three submissions. The qualified lane, challenge, tool-spend, trade-context, attribution, honeypot, and legal-copy fields are customer-visible.
+- The public marketing repository advanced after the verified demand deploy to `8575a36`. The live site now matches that newer two-form experience, but the customer-visible forms capture only email plus optional product interest; challenge and current-tool-spend remain only in Netlify's hidden detection blueprint. This is a **qualified-demand regression**, not evidence that Netlify lost the fields.
+- A minimal repair is prepared and pushed at `fix/restore-qualified-demand-capture-2026-09` commit `e85fc3a`. It preserves the low-friction hero form, labels it `capture_depth=quick`, and restores a distinct footer form with required lane/challenge plus optional spend, labeled `capture_depth=qualified`.
 - Static production verification passes and the deployed HTML contains the corrected attribution capture. The controlled in-app browser does not execute the site's custom scripts, so it cannot provide an independent runtime assertion of hidden-field population or AJAX success; no production test submission was fabricated because it would contaminate customer evidence.
 - SSH access was verified and `fortunainc/tsm-production` was cloned at `2f8df547` on 2026-09-01. The latest production deployment record identifies deployed SHA `991dbff4`, infrastructure/provider health that is currently stale, and Options lifecycle evidence still pending. Neither swing Options nor another lane is commercially certified.
 - The six-hour heartbeat now executes the resolved swing-Options commercialization path rather than repeatedly re-researching generic category demand.
@@ -17,7 +17,7 @@ Last reconciled: 2026-09-01 19:25 America/Los_Angeles
 | Capability | Intended source | Live/customer-visible | Validation | Commercial state | Safe customer test now |
 |---|---|---|---|---|---|
 | Marketing explanation of attention allocation | Built | Yes | Copy only | Not commercially validated | Yes, message testing |
-| Qualified beta form: email, optional name, lane, challenge, tool spend, trade context | Built and deployed | Yes | Live DOM and Netlify form detection observed | Operational for demand capture | Yes |
+| Two-depth beta capture | Repair prepared at `e85fc3a` | Live quick capture; qualified footer regressed | Live HTTP/source reconciliation | Quick signups operational; qualified evidence blocked until repair deploy | Quick capture only |
 | Honeypot and required-field validation | Built and deployed | Yes | DOM/source verified | Operational; no synthetic production submit performed | Yes |
 | UTM/referrer/research variant capture | Built and deployed | Yes in delivered HTML | Static production verifier passes; script syntax verified | Runtime browser assertion unavailable because controlled browser suppresses custom site scripts | Yes, with first real submission audited in Netlify |
 | Options swing record preview | Customer-visible historical preview | Yes | Latest production ledger reconciled | Historical/legacy evidence; natural v0.2 Swing recommendation-to-receipt lifecycle pending; not certified | Message/interview testing only; no performance claim |
@@ -37,4 +37,4 @@ Last reconciled: 2026-09-01 19:25 America/Los_Angeles
 
 ## Highest-value next task
 
-Audit the first new real submission for complete attribution and qualification fields, then recruit qualified Options interviewees from an authorized source. Do not treat the three historical submissions or public anecdotes as qualified evidence until their fields and provenance are verified.
+Merge and deploy `e85fc3a`, verify both `quick` and `qualified` capture depths without contaminating production evidence, then obtain authorized qualified Options traffic/interviews before the 30-day product clock completes.

@@ -2,10 +2,10 @@
 
 | ID | Lane | Proposition | Stable variant | Audience/source | Primary measure | Minimum interpretation gate | State |
 |---|---|---|---|---|---|---|---|
-| X-OPT-01 | Options | Decision compression | `options_decision_compression_v1` | Qualified self-directed options traders | Qualified completion rate | Comparable traffic plus 30 qualified respondents across tested Options messages | ready; requires authorized traffic/recruitment |
-| X-OPT-02 | Options | Complete plan | `options_complete_plan_v1` | Same | Qualified completion rate | Same | ready; requires authorized traffic/recruitment |
-| X-OPT-03 | Options | Rejection discipline | `options_rejection_v1` | Same | Qualified completion rate | Same | ready; requires authorized traffic/recruitment |
-| X-OPT-04 | Options | Receipts/accountability | `options_receipts_v1` | Same | Qualified completion rate | Same | ready; requires authorized traffic/recruitment |
+| X-OPT-01 | Options | Decision compression | `options_decision_compression_v1` | Qualified self-directed options traders | Qualified completion rate | Comparable traffic plus 30 qualified respondents across tested Options messages | repair prepared; needs deploy and authorized traffic |
+| X-OPT-02 | Options | Complete plan | `options_complete_plan_v1` | Same | Qualified completion rate | Same | repair prepared; needs deploy and authorized traffic |
+| X-OPT-03 | Options | Rejection discipline | `options_rejection_v1` | Same | Qualified completion rate | Same | repair prepared; needs deploy and authorized traffic |
+| X-OPT-04 | Options | Receipts/accountability | `options_receipts_v1` | Same | Qualified completion rate | Same | repair prepared; needs deploy and authorized traffic |
 | X-OPT-05 | Options | Personal calibration | `options_your_edge_v1` | Same | Qualified completion rate | Same | planned only; feature readiness unverified |
 | X-CAP-01 | Capital | Hidden dependency risk | `capital_hidden_dependency_v1` | Self-directed long-term investors | Qualified completion rate | 30 qualified Capital respondents | ready; requires authorized traffic/recruitment |
 | X-SPT-01 | Sports | Price discipline and PASS/NO_PLAY | `sports_price_discipline_v1` | Analytical sports/event-market participants | Qualified completion rate | 30 qualified Sports respondents | ready; requires authorized traffic/recruitment |
