@@ -16,14 +16,14 @@
 <meta property="og:image" content="https://getstrikemethod.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="The Strike Method — A few decisions worth your money. Closed beta." />
+<meta property="og:image:alt" content="The Strike Method — Make a sharper call before you put money down. Private beta." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="The Strike Method — Four ways to make a sharper decision." />
 <meta name="twitter:description" content="Qualified Options setups, priced Sports Prediction Markets, source-backed AI stock relationships, and a private record of your own decisions. Closed beta." />
 <meta name="twitter:image" content="https://getstrikemethod.com/og-image.png" />
-<meta name="twitter:image:alt" content="The Strike Method — A few decisions worth your money. Closed beta." />
+<meta name="twitter:image:alt" content="The Strike Method — Make a sharper call before you put money down. Private beta." />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"The Strike Method","url":"https://getstrikemethod.com","description":"Filters thousands of market inputs into a small number of complete decisions. Closed beta.","slogan":"A few decisions worth your money."}
+{"@context":"https://schema.org","@type":"Organization","name":"The Strike Method","url":"https://getstrikemethod.com","description":"Research options, Sports Prediction Markets, and AI stocks in one place, then keep a private record of your own decisions. Closed beta.","slogan":"Make a sharper call before you put money down."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"The Strike Method","url":"https://getstrikemethod.com"}
@@ -128,7 +128,6 @@
   .edge-metric .em-v strong{color:var(--text)}
   .edge-focus{margin-top:14px;padding:13px 14px;border-radius:11px;background:rgba(21,204,142,.07);color:#cfd6d1;font-size:13px}
   .edge-focus b{color:var(--emerald)}
-  .secondary-explanation{display:none}
   .plan-grid .pf:nth-child(n+7){display:none}
   .sc-factors .sc-factor:nth-child(n+5){display:none}
   .sports-context-label,.sc-factors{display:none}
@@ -432,6 +431,7 @@
       <p class="lede"><strong>The Strike Method</strong> helps you research options, sports markets, and AI stocks in one place. You can also save your own trades and notes, so you have a record to learn from. If a setup is not ready, TSM says so.</p>
       <form class="quick-beta" id="heroBetaForm" method="POST" name="beta" aria-label="Join the founding beta">
         <input type="hidden" name="form-name" value="beta" />
+        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
         <input type="hidden" name="research_variant" value="hero-quick-2026-09" />
         <input type="hidden" name="utm_source" />
         <input type="hidden" name="utm_medium" />
@@ -508,89 +508,6 @@
       <summary>What TSM checks</summary>
       <div class="method-body">The checks vary by product. They can include historical data, current prices, technical structure, liquidity, costs, company filings, and market conditions. Published conclusions are recorded before the outcome is known.</div>
     </details>
-  </section>
-
-  <!-- THE PROBLEM -->
-  <section class="wrap block secondary-explanation" aria-hidden="true">
-    <span class="eyebrow">The problem</span>
-    <h2>You don't need more alerts. You need fewer, better decisions.</h2>
-    <p class="kicker">The hard part of investing isn't finding something to look at — it's separating the few situations worth your capital from the endless stream that isn't.</p>
-    <div class="versus">
-      <div class="vcol">
-        <div class="vk">What most tools give you</div>
-        <h3>More to sort through</h3>
-        <ul class="vlist">
-          <li><i></i>More tickers and watchlists</li>
-          <li><i></i>More alerts and notifications</li>
-          <li><i></i>More headlines and hot takes</li>
-          <li><i></i>More charts to interpret</li>
-          <li><i></i>More work left on your plate</li>
-        </ul>
-      </div>
-      <div class="vcol tsm">
-        <div class="vk">What TSM gives you</div>
-        <h3>A finished decision</h3>
-        <ul class="vlist">
-          <li><i></i>A short list, not a firehose</li>
-          <li><i></i>A complete plan with defined risk</li>
-          <li><i></i>The conditions that make it wrong</li>
-          <li><i></i>A record that keeps the misses and the passes</li>
-          <li><i></i>A clear "stand down" when nothing qualifies</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE FOUNDATION — FUNNEL -->
-  <section class="wrap block secondary-explanation" aria-hidden="true">
-    <span class="eyebrow">The foundation</span>
-    <h2>From thousands of inputs to a few complete decisions.</h2>
-    <p class="kicker">TSM runs on a mature research infrastructure. It tests methods across years of historical market data, combines that with point-in-time market inputs, quantitative analysis, technical analysis, and risk/cost/liquidity filters — then rejects most candidates to surface the few that deserve a complete plan. Or it says plainly: nothing today.</p>
-
-    <div class="funnel">
-      <div class="funnel-box wide">
-        <div class="fb-k">Inputs</div>
-        <div class="fb-t">Years of historical market data + point-in-time market inputs</div>
-        <div class="fb-d">Price, volume, and structure data across options, stocks, and sports markets — combined with point-in-time quotes, spreads, and liquidity</div>
-      </div>
-      <div class="funnel-arrow">↓</div>
-      <div class="funnel-box">
-        <div class="fb-k">Layer 1</div>
-        <div class="fb-t">Quantitative analysis</div>
-        <div class="fb-d">Methods tested out-of-sample across years of historical data — not curve-fit to one period</div>
-      </div>
-      <div class="funnel-arrow">↓</div>
-      <div class="funnel-box">
-        <div class="fb-k">Layer 2</div>
-        <div class="fb-t">Technical analysis and price/volume structure</div>
-        <div class="fb-d">Does the chart confirm or contradict the quantitative case?</div>
-      </div>
-      <div class="funnel-arrow">↓</div>
-      <div class="funnel-box">
-        <div class="fb-k">Layer 3</div>
-        <div class="fb-t">Risk, cost, and liquidity filters</div>
-        <div class="fb-d">Real-world conditions — fees, spreads, fill quality, and position sizing — not frictionless assumptions</div>
-      </div>
-      <div class="funnel-arrow">↓</div>
-      <div class="funnel-box reject">
-        <div class="fb-k">Most rejected</div>
-        <div class="funnel-stages">
-          <span class="funnel-stage stand">Rejected</span>
-          <span class="funnel-stage">Watch</span>
-          <span class="funnel-stage act">Ready</span>
-          <span class="funnel-stage stand">No trade</span>
-        </div>
-        <div class="fb-d" style="margin-top:10px">Most setups fail here. Weak structures, thin liquidity, missing evidence, or hard gates block them. Survivors arrive with entry, invalidation, targets, time horizon, and exit logic.</div>
-      </div>
-      <div class="funnel-arrow">↓</div>
-      <div class="funnel-box narrow">
-        <div class="fb-k">Result</div>
-        <div class="fb-t">A few complete decisions</div>
-        <div class="fb-d">Or an honest "no trade" — standing down is a valid decision</div>
-      </div>
-    </div>
-
-    <p class="kicker" style="margin-top:26px">Many candidates enter the funnel. Most are rejected — weak structure, thin liquidity, missing evidence, or a hard gate blocks them. What survives arrives with the entry, the risk, the target, the time horizon, and the exit — so you know what you are doing and why before you put money to work. When nothing clears the bar, TSM says so.</p>
   </section>
 
   <!-- OPTIONS -->
