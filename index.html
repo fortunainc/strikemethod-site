@@ -442,6 +442,7 @@
         <input type="email" name="email" required placeholder="Enter your email" autocomplete="email" aria-label="Email address" />
         <button type="submit" class="btn btn-primary btn-lg">Get priority access</button>
       </form>
+      <p class="formerr" id="heroFormErr" role="alert" aria-live="polite">Something went wrong — please try again, or email us directly.</p>
       <div class="hero-success" id="heroSuccess"><strong>You're on the priority list.</strong> Watch your inbox for the next invitation wave.</div>
       <p class="invite-note"><span class="dot"></span> Small invitation waves while the 30-day product testing is underway.</p>
       <div class="micro-proof"><span><i></i>Four connected products</span><span><i></i>Decisions recorded before outcomes</span><span><i></i>Learn what works for you</span></div>
@@ -750,7 +751,7 @@
               </select>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">Join the priority list</button>
-            <p class="formerr" id="formErr">Something went wrong — please try again, or email us directly.</p>
+            <p class="formerr" id="formErr" role="alert" aria-live="polite">Something went wrong — please try again, or email us directly.</p>
           </form>
           <p class="formnote">The Strike Method is an educational decision-support tool, not financial advice. Your email is used to contact you about beta access. See our <a href="/legal/privacy.html" style="color:var(--muted);text-decoration:underline">privacy policy</a> and <a href="/legal/terms.html" style="color:var(--muted);text-decoration:underline">terms</a>.</p>
         </div>
@@ -845,14 +846,14 @@
   })();
 
   // AJAX submit to Netlify Forms -> inline success (no page redirect)
-  function wireBetaForm(form, onSuccess){
+  function wireBetaForm(form, errorId, onSuccess){
     if(!form) return;
     form.addEventListener('submit', function(e){
       e.preventDefault();
       captureAttribution();
       var btn=form.querySelector('button[type=submit]');
       var original=btn.textContent;
-      var err=document.getElementById('formErr');
+      var err=document.getElementById(errorId);
       if(err) err.style.display='none';
       btn.disabled=true; btn.textContent='Joining…';
       var data=new URLSearchParams(new FormData(form)).toString();
@@ -861,11 +862,11 @@
         .catch(function(){if(err) err.style.display='block';btn.disabled=false;btn.textContent=original;});
     });
   }
-  wireBetaForm(document.getElementById('heroBetaForm'), function(){
+  wireBetaForm(document.getElementById('heroBetaForm'), 'heroFormErr', function(){
     document.getElementById('heroBetaForm').style.display='none';
     document.getElementById('heroSuccess').style.display='block';
   });
-  wireBetaForm(document.getElementById('betaForm'), function(){
+  wireBetaForm(document.getElementById('betaForm'), 'formErr', function(){
     document.getElementById('formView').style.display='none';
     document.getElementById('successView').style.display='block';
     document.getElementById('successView').scrollIntoView({behavior:'smooth',block:'center'});
