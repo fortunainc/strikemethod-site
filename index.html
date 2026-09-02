@@ -3,27 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Strike Method — Four ways to make a sharper decision.</title>
-<meta name="description" content="TSM finds qualified Options setups, prices Sports Prediction Markets, maps the forces behind AI stocks, and turns your own trades into a private learning record. Join the founding beta." />
+<title>The Strike Method — Make better calls. Build your edge.</title>
+<meta name="description" content="TSM helps you make sharper decisions in options, sports markets, and AI stocks—then save your own trades and reasoning so you have a record to learn from. Join the closed beta." />
 <meta name="theme-color" content="#070908" />
 <!-- social preview -->
 <link rel="canonical" href="https://getstrikemethod.com/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Strike Method" />
-<meta property="og:title" content="The Strike Method — Four ways to make a sharper decision." />
-<meta property="og:description" content="Qualified Options setups, priced Sports Prediction Markets, source-backed AI stock relationships, and a private record of your own decisions. Closed beta." />
+<meta property="og:title" content="The Strike Method — Make better calls. Build your edge." />
+<meta property="og:description" content="Research the decision, know when to wait, and keep a private record of what you did. Closed beta." />
 <meta property="og:url" content="https://getstrikemethod.com/" />
 <meta property="og:image" content="https://getstrikemethod.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="The Strike Method — Make a sharper call before you put money down. Private beta." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Strike Method — Four ways to make a sharper decision." />
-<meta name="twitter:description" content="Qualified Options setups, priced Sports Prediction Markets, source-backed AI stock relationships, and a private record of your own decisions. Closed beta." />
+<meta name="twitter:title" content="The Strike Method — Make better calls. Build your edge." />
+<meta name="twitter:description" content="Research the decision, know when to wait, and keep a private record of what you did. Closed beta." />
 <meta name="twitter:image" content="https://getstrikemethod.com/og-image.png" />
 <meta name="twitter:image:alt" content="The Strike Method — Make a sharper call before you put money down. Private beta." />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"The Strike Method","url":"https://getstrikemethod.com","description":"Research options, Sports Prediction Markets, and AI stocks in one place, then keep a private record of your own decisions. Closed beta.","slogan":"Make a sharper call before you put money down."}
+{"@context":"https://schema.org","@type":"Organization","name":"The Strike Method","url":"https://getstrikemethod.com","description":"Research decisions in options, Sports Prediction Markets, and AI stocks, then keep a private record of your own trades and reasoning. Closed beta.","slogan":"Make better calls. Build your edge."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"The Strike Method","url":"https://getstrikemethod.com"}
@@ -116,6 +116,13 @@
   .compact-method summary:after{content:"+";float:right;color:var(--emerald)}
   .compact-method[open] summary:after{content:"−"}
   .compact-method .method-body{padding:0 18px 18px;color:var(--muted);font-size:14px}
+  .product-preview{margin-top:24px;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+  .product-preview>summary{cursor:pointer;padding:16px 18px;color:#cfd6d1;font-weight:600;list-style:none}
+  .product-preview>summary::-webkit-details-marker{display:none}
+  .product-preview>summary:after{content:"See preview +";float:right;color:var(--emerald);font:400 11px/1.6 "Space Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
+  .product-preview[open]>summary:after{content:"Close −"}
+  .product-preview>.split,.product-preview>#tsm-capital-options,.product-preview>.helps{margin-left:18px;margin-right:18px}
+  .product-preview>.split,.product-preview>.helps{margin-bottom:18px}
   .status-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
   .status-item{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
   .status-item b{display:block;color:var(--text);font-size:14px;margin-bottom:3px}
@@ -151,7 +158,7 @@
   .quiet-note b{color:var(--amber);font-weight:600}
 
   /* sections */
-  section.block{padding:70px 0;border-top:1px solid var(--line)}
+  section.block{padding:56px 0;border-top:1px solid var(--line)}
   .block h2{font-size:clamp(26px,3.4vw,37px);font-weight:700;letter-spacing:-.02em;margin:14px 0 0;max-width:20ch}
   .block .kicker{margin-top:14px;color:var(--muted);max-width:52ch;font-size:16px}
   .lead-line{margin-top:18px;font-size:17px;color:#cfd6d1;max-width:60ch}
@@ -428,8 +435,8 @@
   <section class="wrap hero">
     <div>
       <span class="eyebrow">Founding beta · invitations opening in waves</span>
-      <h1>Make a sharper call<br><span class="accent">before you put money down.</span></h1>
-      <p class="lede"><strong>The Strike Method</strong> helps you research options, sports markets, and AI stocks in one place. You can also save your own trades and notes, so you have a record to learn from. If a setup is not ready, TSM says so.</p>
+      <h1>Make better calls.<br><span class="accent">Build your edge.</span></h1>
+      <p class="lede"><strong>The Strike Method</strong> helps you decide what is worth acting on in options, sports markets, and AI stocks—and when to wait. Then save your own trade, screenshot, and reasoning so you have a private record to learn from.</p>
       <form class="quick-beta" id="heroBetaForm" method="POST" name="beta" aria-label="Join the founding beta">
         <input type="hidden" name="form-name" value="beta" />
         <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
@@ -446,8 +453,8 @@
       </form>
       <p class="formerr" id="heroFormErr" role="alert" aria-live="polite">Something went wrong — please try again, or email us directly.</p>
       <div class="hero-success" id="heroSuccess"><strong>You're on the priority list.</strong> Watch your inbox for the next invitation wave.</div>
-      <p class="invite-note"><span class="dot"></span> Small invitation waves while the 30-day product testing is underway.</p>
-      <div class="micro-proof"><span><i></i>Four connected products</span><span><i></i>Decisions recorded before outcomes</span><span><i></i>Learn what works for you</span></div>
+      <p class="invite-note"><span class="dot"></span> Closed beta. Join during the 30-day testing round to be considered for the next invitation wave.</p>
+      <div class="micro-proof"><span><i></i>One method across four products</span><span><i></i>Weak setups get passed over</span><span><i></i>Your record stays private</span></div>
     </div>
 
     <!-- TEASER CARD -->
@@ -458,7 +465,7 @@
       </div>
       <div class="read">
         <div class="count">Options · Sports · AI stocks · Your Edge</div>
-        <div class="headline">See what is worth watching, <span class="accent">why it matters,</span> and what happened next.</div>
+        <div class="headline">Research the call. Save what you did. <span class="accent">Learn from the record.</span></div>
       </div>
       <div class="row">
         <span class="mk"></span>
@@ -481,7 +488,7 @@
           <div class="v">Verified suppliers, technologies, capacity constraints, and policy risks with the source attached.</div>
         </div>
       </div>
-      <div class="quiet-note"><b>Your Edge:</b> save a screenshot and a note about why you took the trade or passed.</div>
+      <div class="quiet-note"><b>Your Edge:</b> upload a trade screenshot, confirm the ticker, and save why you took it or passed.</div>
     </div>
   </section>
 
@@ -489,24 +496,7 @@
   <section id="how" class="wrap block">
     <span class="eyebrow">How it works</span>
     <h2>Start with what is worth a closer look.</h2>
-    <p class="kicker">TSM narrows the field, checks the details that can change the outcome, and shows you why something is ready or why it is not.</p>
-    <div class="grid3">
-      <div class="feat">
-        <span class="n">01</span>
-        <h3>Narrow the field</h3>
-        <p>TSM screens out ideas that do not meet the basic requirements.</p>
-      </div>
-      <div class="feat">
-        <span class="n">02</span>
-        <h3>Check the details</h3>
-        <p>The remaining ideas are checked for price, risk, costs, liquidity, and supporting information.</p>
-      </div>
-      <div class="feat">
-        <span class="n">03</span>
-        <h3>Show the reason</h3>
-        <p>You see what matters, what could go wrong, and why TSM is ready, waiting, or passing.</p>
-      </div>
-    </div>
+    <p class="kicker">TSM narrows the field, checks price, risk, costs, liquidity, and evidence, then shows why something is ready—or why it is not. Save your own decision in Your Edge and give yourself something honest to review later.</p>
     <details class="compact-method">
       <summary>What TSM checks</summary>
       <div class="method-body">The checks vary by product. They can include historical data, current prices, technical structure, liquidity, costs, company filings, and market conditions. Published conclusions are recorded before the outcome is known.</div>
@@ -515,31 +505,22 @@
 
   <!-- OPTIONS -->
   <div class="wrap status-strip" aria-label="The Strike Method experience">
-    <div class="status-item"><b>Options decisions</b><span>Complete contracts, entries, risk, and exits</span></div>
+    <div class="status-item"><b>Your Edge</b><span>A private record of your screenshots and reasoning</span></div>
+    <div class="status-item"><b>Options decisions</b><span>Contracts, entries, risk, and exits after confirmation</span></div>
     <div class="status-item"><b>AI Stock Ecosystem</b><span>Source-backed relationships with filing excerpts</span></div>
     <div class="status-item"><b>Sports Prediction Markets</b><span>TSM probability versus the price traders pay</span></div>
-    <div class="status-item"><b>Your Edge</b><span>A private record of your screenshots and reasoning</span></div>
   </div>
   <section id="options" class="wrap block">
     <span class="eyebrow">Options</span>
     <h2>Know what to watch and when it becomes actionable.</h2>
     <p class="lead-line">The live Options board separates <strong>next-open candidates</strong> from executable plans. A stock is not assigned to Scalp or Swing until its timing, contract, entry, and risk all qualify.</p>
-    <div class="split">
+    <details class="product-preview">
+      <summary>Explore the Options board</summary>
+      <div class="split">
       <div class="copy">
         <p><strong>Prepare before the open.</strong> See the direction, defined trade level, volume behavior, buyer or seller imbalance, rejection level, and broader-market alignment.</p>
         <p><strong>Wait for the contract.</strong> Nothing is presented as executable until the market is open and the option contract confirms.</p>
-        <div class="horizons">
-          <div class="hz">
-            <div class="hzk">Swing options</div>
-            <h4>Days to weeks</h4>
-            <p>Multi-day setups with their own timing, contract, entry, and risk checks.</p>
-          </div>
-          <div class="hz">
-            <div class="hzk">Intraday options</div>
-            <h4>Shorter, stricter</h4>
-            <p>Same-day setups that confirm only after the open.</p>
-          </div>
-        </div>
+        <p><strong>Two separate boards.</strong> Swing covers multi-day setups; Scalp covers same-day setups. Each has its own qualification rules.</p>
       </div>
 
       <div class="card plan" aria-label="Illustrative preview of the live Options next-open watch">
@@ -564,14 +545,17 @@
         </div>
         <div class="notrade"><b>Where it stands today:</b> Options does not have a customer performance record yet. Results will appear after enough published setups have completed.</div>
       </div>
-    </div>
+      </div>
+    </details>
   </section>
 
   <!-- LONG-TERM STOCKS / STOCK ECOSYSTEM MAP -->
   <section id="stocks" class="wrap block">
     <span class="eyebrow">AI Stock Ecosystem</span>
     <h2>Understand the companies behind the AI trade.</h2>
-    <p class="lead-line">Start with NVIDIA and follow the verified suppliers, technologies, capacity constraints, and policy risks shaping AI infrastructure. <strong>Open the exact filing excerpt behind each released connection.</strong></p>
+    <p class="lead-line">Start with NVIDIA and follow released suppliers, technologies, capacity constraints, and policy risks shaping AI infrastructure. <strong>Open the filing excerpt behind each source-checked connection.</strong> Live backdrop data may be unavailable while it refreshes.</p>
+    <details class="product-preview">
+      <summary>Explore the Stock Ecosystem preview</summary>
 
     <!-- STOCK ECOSYSTEM MAP — founder-approved Option A visual -->
     <div id="tsm-capital-options">
@@ -636,6 +620,7 @@
       <p><strong>Risk:</strong> Spot when several holdings quietly depend on the same supplier, technology, or regulation.</p>
       <p><strong>Opportunity:</strong> Discover less-obvious companies supporting a major winner. Every displayed connection traces to a source you can inspect.</p>
     </div>
+    </details>
   </section>
 
   <!-- SPORTS -->
@@ -643,7 +628,9 @@
     <span class="eyebrow">Sports Prediction Markets</span>
     <h2>Is the market price wrong enough to matter?</h2>
     <p class="lead-line">TSM estimates the probability of an outcome and compares it with the available price. Each sport keeps its own record. A play appears only when the difference is large enough after the required checks.</p>
-    <div class="split">
+    <details class="product-preview">
+      <summary>Explore the Sports market view</summary>
+      <div class="split">
       <div class="copy">
         <p><strong>No forced pick.</strong> Games can exist without a price gap worth publishing. When nothing qualifies, the live screen says so.</p>
         <p><strong>A record that keeps the misses.</strong> Every published market is graded after settlement, and leagues are never combined to make performance look stronger.</p>
@@ -687,19 +674,20 @@
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </details>
   </section>
 
   <!-- YOUR EDGE — CROSS-PRODUCT JOURNAL + IMPROVEMENT LAYER -->
   <section id="your-edge" class="wrap block">
     <span class="eyebrow">Your Edge</span>
     <h2>Keep a record you can learn from.</h2>
-    <p class="lead-line">Save a broker confirmation, chart, or position screenshot with the ticker and a note about what you saw. Your Edge gives you one private place to keep the decisions you made across Options, Stocks, and Sports.</p>
+    <p class="lead-line">Upload a broker confirmation, chart, or position screenshot, confirm the ticker, and add what you saw and why. Your Edge starts a private record of your own trades and passes.</p>
     <div class="split">
       <div class="copy">
         <p><strong>Save the context.</strong> Add why you took the trade, passed, followed the setup, or went another way.</p>
         <p><strong>Keep it private.</strong> This is your workspace, not a public scorecard.</p>
-        <p><strong>Give yourself something to review.</strong> A useful journal starts with an honest record of what you actually did.</p>
+        <p><strong>Build the record first.</strong> As you add trades and passes, you create something honest to review for patterns later.</p>
       </div>
       <div class="edge-card" aria-label="Preview of the current Your Edge workflow">
         <div class="card-head"><span class="t">Add a decision</span><span class="chip">Private to you</span></div>
@@ -719,11 +707,11 @@
       </div>
       <div class="access-card">
         <div id="formView">
-          <h2>Want to try TSM before launch?</h2>
-          <p class="sub">We are testing Options, Sports Prediction Markets, the AI Stock Ecosystem, and Your Edge with a small beta group. Add your email to be considered for the next round.</p>
+          <h2>Join the next private-beta wave.</h2>
+          <p class="sub">The current 30-day round is testing Options, Sports Prediction Markets, the AI Stock Ecosystem, and Your Edge with a small group. Join the priority list before the next invitations go out.</p>
           <div class="price">
             <span class="beta-label">Founding beta · limited invitation waves</span>
-            <span class="beta-note">Early members get preferred beta pricing and can tell us what needs work before launch.</span>
+            <span class="beta-note">Payments are not open. Early members get the first notice of beta pricing and a direct say in what we improve before launch.</span>
           </div>
 
           <form class="beta" id="betaForm" method="POST" name="beta">
