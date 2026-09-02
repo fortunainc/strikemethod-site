@@ -1,0 +1,39 @@
+# Current status
+
+Last reconciled: 2026-09-01 16:58 America/Los_Angeles
+
+## Executive truth
+
+- Commercial demand is **not demonstrated** for Options, Capital, or Sports. No verified qualified-response, interview, product-usage, deposit, payment, or retention dataset is available in this workspace.
+- Category-level interest and competitor activity remain research hypotheses, not TSM demand evidence.
+- The public marketing repository is authoritative for intended site source at commit `6b5bb4fc9560b11253c9a65b673611f2a3f0707c`.
+- The live site at `https://getstrikemethod.com/` is served by Netlify but is stale: it still exposes the old three-field beta form and does not show the qualified-demand fields merged in commit `6b5bb4f`.
+- `fortunainc/tsm-production` could not be cloned without GitHub credentials. Engine/product readiness therefore remains unverified, and marketing claims must not be expanded.
+
+## Capability matrix
+
+| Capability | Intended source | Live/customer-visible | Validation | Commercial state | Safe customer test now |
+|---|---|---|---|---|---|
+| Marketing explanation of attention allocation | Built | Yes | Copy only | Not commercially validated | Yes, message testing |
+| Basic beta form: email, name, free-text investing style | Built | Yes | Live DOM observed | Operational, unqualified capture | Yes |
+| Qualified beta fields: lane, challenge, tool spend | Built on `main` | No | Source reviewed | Deployment blocked/stale | No, until deploy verified |
+| UTM/referrer/research variant capture | Built on `main` | Old UTM/referrer only; research variant absent | Live DOM observed | Incomplete | No valid variant experiment yet |
+| Options swing record preview | Customer-visible historical preview | Yes | Engine provenance inaccessible | Historical, unsettled, not certified | Only with existing labels |
+| Options intraday | Copy says shadow validation | Yes | Engine inaccessible | Shadow, not live | No commercial claim |
+| Capital ecosystem map | Product preview | Yes | Source/provenance inaccessible | Preview, not return prediction | Message/concept only |
+| Sports MLB moneyline | Copy says paper trading | Yes | Engine inaccessible | Paper/shadow; no real-money results | Concept only |
+| Analytics funnel | Not found in repository or live DOM | No | Live source inspected | Planned only | No |
+| Billing/entitlements/refunds | Not verified | No | Production repo inaccessible | Commercially blocked | No payment collection |
+
+## Demand confidence
+
+| Lane | Confidence | Basis | Missing gate evidence |
+|---|---:|---|---|
+| Options | 1/5 | Initial wedge hypothesis plus customer-facing proposition; no TSM behavioral evidence | 30 qualified respondents, 10 product evaluators, 5 authorized commitments, retention |
+| Capital | 1/5 | Customer-facing concept only | Same, independently sampled |
+| Sports | 1/5 | Customer-facing concept only; paper/shadow limitations | Same, independently sampled |
+
+## Highest-value next task
+
+Deploy commit `6b5bb4f` through the authorized Netlify pipeline, then verify form detection, field recording, attribution, validation, honeypot, mobile/desktop behavior, and success/error states without destroying existing submissions. Separately provide read access to the production repository and aggregate form/analytics data.
+
