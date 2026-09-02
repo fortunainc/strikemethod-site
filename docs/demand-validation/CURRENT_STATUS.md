@@ -25,11 +25,11 @@ Last reconciled: 2026-09-01 18:00 America/Los_Angeles
 | Analytics funnel | Not found in repository or live DOM | No | Live source inspected | Planned only | No |
 | Billing/entitlements/refunds | Not verified | No | Production repo inaccessible | Commercially blocked | No payment collection |
 
-## Demand confidence
+## Commercial-evidence maturity (not market-demand confidence)
 
-| Lane | Confidence | Basis | Missing gate evidence |
+| Lane | Maturity | Basis | Missing gate evidence |
 |---|---:|---|---|
-| Options | 2/5 | Current category spend plus repeated public pain aligns with decision compression, rejection discipline and receipts; no TSM behavioral evidence | 30 qualified respondents, 10 product evaluators, 5 authorized commitments, retention |
+| Options | 2/5 | **Market demand is sufficient for a narrow launch-validation effort.** The score tracks later TSM-specific conversion/payment maturity, not market-demand confidence. | 30 qualified respondents, 10 product evaluators, 5 authorized commitments, retention |
 | Capital | 1/5 | Paid research category exists, but hidden-dependency pain and TSM differentiation are not yet evidenced | Same, independently sampled |
 | Sports | 2/5 category / 1/5 launch | Strong paid analytics category and price/switching pain; TSM remains paper/shadow and untested | Same, independently sampled; production readiness |
 
