@@ -377,6 +377,7 @@
   <select name="primary_interest"><option value=""></option></select>
   <select name="biggest_challenge"><option value=""></option></select>
   <select name="current_tool_spend"><option value=""></option></select>
+  <input type="hidden" name="capture_depth" />
   <input type="hidden" name="research_variant" />
   <input type="hidden" name="utm_source" />
   <input type="hidden" name="utm_medium" />
@@ -433,6 +434,7 @@
         <input type="hidden" name="form-name" value="beta" />
         <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
         <input type="hidden" name="research_variant" value="hero-quick-2026-09" />
+        <input type="hidden" name="capture_depth" value="quick" />
         <input type="hidden" name="utm_source" />
         <input type="hidden" name="utm_medium" />
         <input type="hidden" name="utm_campaign" />
@@ -734,20 +736,43 @@
             <input type="hidden" name="utm_term" id="utm_term" />
             <input type="hidden" name="referrer" id="referrer_field" />
             <input type="hidden" name="research_variant" id="research_variant" value="site-control-2026-09" />
+            <input type="hidden" name="capture_depth" value="qualified" />
 
             <div class="field">
               <label for="email">Email <span aria-hidden="true">*</span></label>
               <input id="email" type="email" name="email" required placeholder="you@email.com" autocomplete="email" />
             </div>
             <div class="field">
-              <label for="primary_interest">What do you want to see first? <span style="color:var(--muted-2)">(optional)</span></label>
-              <select id="primary_interest" name="primary_interest">
-                <option value="" selected>Choose a product</option>
+              <label for="primary_interest">What do you want to see first? <span aria-hidden="true">*</span></label>
+              <select id="primary_interest" name="primary_interest" required>
+                <option value="" selected disabled>Choose a product</option>
                 <option value="options">Options decisions</option>
                 <option value="long_term">AI Stock Ecosystem</option>
                 <option value="sports">Sports Prediction Markets</option>
                 <option value="your_edge">Your Edge journal and improvement</option>
                 <option value="multiple">More than one</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="biggest_challenge">What is the biggest problem you want it to solve? <span aria-hidden="true">*</span></label>
+              <select id="biggest_challenge" name="biggest_challenge" required>
+                <option value="" selected disabled>Choose a problem</option>
+                <option value="too_much_data">Too much data and too many signals</option>
+                <option value="complete_plan">Turning an idea into a complete plan</option>
+                <option value="trust">Knowing which tools or signals to trust</option>
+                <option value="discipline">Knowing when to pass or stand down</option>
+                <option value="track_record">Tracking what actually works over time</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="current_tool_spend">What do you currently spend on research tools? <span style="color:var(--muted-2)">(optional)</span></label>
+              <select id="current_tool_spend" name="current_tool_spend">
+                <option value="" selected>Choose a range</option>
+                <option value="0">$0 per month</option>
+                <option value="1_49">$1–$49 per month</option>
+                <option value="50_99">$50–$99 per month</option>
+                <option value="100_199">$100–$199 per month</option>
+                <option value="200_plus">$200+ per month</option>
               </select>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">Join the priority list</button>
