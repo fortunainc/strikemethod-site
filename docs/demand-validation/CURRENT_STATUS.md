@@ -9,6 +9,7 @@ Last reconciled: 2026-09-01 18:00 America/Los_Angeles
 - The public marketing repository is authoritative for intended site source at commit `6b5bb4fc9560b11253c9a65b673611f2a3f0707c`.
 - The live site at `https://getstrikemethod.com/` is served by Netlify but is stale: it still exposes the old three-field beta form and does not show the qualified-demand fields merged in commit `6b5bb4f`.
 - `fortunainc/tsm-production` could not be cloned without GitHub credentials. Engine/product readiness therefore remains unverified, and marketing claims must not be expanded.
+- The six-hour heartbeat now executes the resolved swing-Options commercialization path rather than repeatedly re-researching generic category demand.
 
 ## Capability matrix
 
