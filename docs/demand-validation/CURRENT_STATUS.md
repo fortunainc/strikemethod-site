@@ -8,7 +8,7 @@ Last reconciled: 2026-09-01 18:00 America/Los_Angeles
 - Current category-spend evidence is now established in all three lanes. Options has the best proposition-level pain alignment: overload, incomplete interpretation, discipline, and recordkeeping recur in public samples, while paid adjacent products span roughly $35–$99/month. This is still not TSM demand evidence.
 - The public marketing repository is authoritative for intended site source at commit `6b5bb4fc9560b11253c9a65b673611f2a3f0707c`.
 - The live site at `https://getstrikemethod.com/` is served by Netlify but is stale: it still exposes the old three-field beta form and does not show the qualified-demand fields merged in commit `6b5bb4f`.
-- `fortunainc/tsm-production` could not be cloned without GitHub credentials. Engine/product readiness therefore remains unverified, and marketing claims must not be expanded.
+- SSH access was verified and `fortunainc/tsm-production` was cloned at `2f8df547` on 2026-09-01. The latest production deployment record identifies deployed SHA `991dbff4`, infrastructure/provider health that is currently stale, and Options lifecycle evidence still pending. Neither swing Options nor another lane is commercially certified.
 - The six-hour heartbeat now executes the resolved swing-Options commercialization path rather than repeatedly re-researching generic category demand.
 
 ## Capability matrix
@@ -19,12 +19,12 @@ Last reconciled: 2026-09-01 18:00 America/Los_Angeles
 | Basic beta form: email, name, free-text investing style | Built | Yes | Live DOM observed | Operational, unqualified capture | Yes |
 | Qualified beta fields: lane, challenge, tool spend | Built on `main` | No | Source reviewed | Deployment blocked/stale | No, until deploy verified |
 | UTM/referrer/research variant capture | Built on `main` | Old UTM/referrer only; research variant absent | Live DOM observed | Incomplete | No valid variant experiment yet |
-| Options swing record preview | Customer-visible historical preview | Yes | Engine provenance inaccessible | Historical, unsettled, not certified | Only with existing labels |
+| Options swing record preview | Customer-visible historical preview | Yes | Latest production ledger reconciled | Historical/legacy evidence; natural v0.2 Swing recommendation-to-receipt lifecycle pending; not certified | Message/interview testing only; no performance claim |
 | Options intraday | Copy says shadow validation | Yes | Engine inaccessible | Shadow, not live | No commercial claim |
 | Capital ecosystem map | Product preview | Yes | Source/provenance inaccessible | Preview, not return prediction | Message/concept only |
 | Sports MLB moneyline | Copy says paper trading | Yes | Engine inaccessible | Paper/shadow; no real-money results | Concept only |
 | Analytics funnel | Not found in repository or live DOM | No | Live source inspected | Planned only | No |
-| Billing/entitlements/refunds | Not verified | No | Production repo inaccessible | Commercially blocked | No payment collection |
+| Billing/entitlements/refunds | Explicitly externally blocked in production ledger | No | Production source verified | Commercially blocked | No payment collection |
 
 ## Commercial-evidence maturity (not market-demand confidence)
 
