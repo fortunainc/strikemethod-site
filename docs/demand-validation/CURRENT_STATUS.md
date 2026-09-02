@@ -1,6 +1,6 @@
 # Current status
 
-Last reconciled: 2026-09-02 01:27 America/Los_Angeles
+Last reconciled: 2026-09-02 07:28 America/Los_Angeles
 
 ## Executive truth
 
@@ -8,6 +8,7 @@ Last reconciled: 2026-09-02 01:27 America/Los_Angeles
 - Current category-spend evidence is now established in all three lanes. Options has the best proposition-level pain alignment: overload, incomplete interpretation, discipline, and recordkeeping recur in public samples, while paid adjacent products span roughly $35–$99/month. This is still not TSM demand evidence.
 - The public marketing repository advanced after the verified demand deploy to `8575a36`. The live site now matches that newer two-form experience, but the customer-visible forms capture only email plus optional product interest; challenge and current-tool-spend remain only in Netlify's hidden detection blueprint. This is a **qualified-demand regression**, not evidence that Netlify lost the fields.
 - A minimal repair is prepared and pushed at `fix/restore-qualified-demand-capture-2026-09` commit `e85fc3a`. It preserves the low-friction hero form, labels it `capture_depth=quick`, and restores a distinct footer form with required lane/challenge plus optional spend, labeled `capture_depth=qualified`.
+- Netlify's privacy-safe aggregate remains three total submissions, with the last submission on 2026-08-14. No new behavior has arrived since the qualified-demand work began; there is therefore still no TSM-specific response evidence to analyze.
 - Static production verification passes and the deployed HTML contains the corrected attribution capture. The controlled in-app browser does not execute the site's custom scripts, so it cannot provide an independent runtime assertion of hidden-field population or AJAX success; no production test submission was fabricated because it would contaminate customer evidence.
 - SSH access was verified and `fortunainc/tsm-production` was cloned at `2f8df547` on 2026-09-01. The latest production deployment record identifies deployed SHA `991dbff4`, infrastructure/provider health that is currently stale, and Options lifecycle evidence still pending. Neither swing Options nor another lane is commercially certified.
 - The six-hour heartbeat now executes the resolved swing-Options commercialization path rather than repeatedly re-researching generic category demand.
