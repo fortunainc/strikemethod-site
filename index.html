@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Strike Method — A few decisions worth your money.</title>
-<meta name="description" content="The Strike Method filters thousands of market inputs into a small number of complete decisions — what deserves your capital, where the risk is, and when standing down can protect it. Options, long-term stocks, and sports analysis. Closed beta." />
+<title>The Strike Method — Know what deserves your money.</title>
+<meta name="description" content="The Strike Method turns options, long-term stock, and sports-market research into a few clear, risk-defined decisions. Join the founding beta before public access opens." />
 <meta name="theme-color" content="#070908" />
 <!-- social preview -->
 <link rel="canonical" href="https://getstrikemethod.com/" />
@@ -100,6 +100,37 @@
   .hero-cta{margin-top:30px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .cap{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
   .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber);flex:0 0 auto}
+  .quick-beta{margin-top:26px;display:flex;gap:10px;max-width:520px}
+  .quick-beta input{flex:1;min-width:0;background:var(--panel);border:1px solid var(--line-2);color:var(--text);border-radius:10px;padding:13px 14px;font:inherit}
+  .quick-beta input:focus{border-color:var(--emerald);outline:none;box-shadow:0 0 0 3px rgba(21,204,142,.10)}
+  .quick-beta .btn{white-space:nowrap}
+  .invite-note{margin-top:11px;color:var(--muted);font-size:13px;display:flex;align-items:center;gap:8px}
+  .micro-proof{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;color:#cfd6d1;font-size:13px}
+  .micro-proof span{display:flex;align-items:center;gap:7px}
+  .micro-proof i{width:5px;height:5px;border-radius:50%;background:var(--emerald)}
+  .hero-success{display:none;margin-top:24px;padding:14px 16px;border:1px solid var(--emerald-deep);border-radius:12px;background:rgba(21,204,142,.06);color:#cfd6d1}
+  .hero-success strong{color:var(--text)}
+  .compact-method{margin-top:26px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+  .compact-method summary{cursor:pointer;padding:16px 18px;color:#cfd6d1;font-weight:600;list-style:none}
+  .compact-method summary::-webkit-details-marker{display:none}
+  .compact-method summary:after{content:"+";float:right;color:var(--emerald)}
+  .compact-method[open] summary:after{content:"−"}
+  .compact-method .method-body{padding:0 18px 18px;color:var(--muted);font-size:14px}
+  .status-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+  .status-item{padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+  .status-item b{display:block;color:var(--text);font-size:14px;margin-bottom:3px}
+  .status-item span{color:var(--muted);font-size:12px}
+  .edge-card{background:linear-gradient(145deg,rgba(21,204,142,.08),transparent 55%),var(--panel);border:1px solid var(--emerald-deep);border-radius:18px;padding:20px}
+  .edge-metric{padding:14px 0;border-bottom:1px solid var(--line)}
+  .edge-metric:last-child{border-bottom:0;padding-bottom:0}
+  .edge-metric .em-k{font:400 10px/1.3 "Space Mono",monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+  .edge-metric .em-v{margin-top:6px;color:#cfd6d1;font-size:14px}
+  .edge-metric .em-v strong{color:var(--text)}
+  .edge-focus{margin-top:14px;padding:13px 14px;border-radius:11px;background:rgba(21,204,142,.07);color:#cfd6d1;font-size:13px}
+  .edge-focus b{color:var(--emerald)}
+  .secondary-explanation{display:none}
+  .plan-grid .pf:nth-child(n+7){display:none}
+  .sc-factors .sc-factor:nth-child(n+5){display:none}
 
   /* teaser card */
   .card{background:linear-gradient(180deg,var(--panel),#0a0f0d);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 30px 80px -40px rgba(0,0,0,.9)}
@@ -286,6 +317,7 @@
 
   /* responsive */
   @media (max-width:960px){
+    .status-strip{grid-template-columns:repeat(2,1fr)}
     #tsm-capital-options .tsm-head{align-items:flex-start;flex-direction:column}
     #tsm-capital-options .tsm-grid{grid-template-columns:1fr}
     #tsm-capital-options .tsm-inspector{border-left:0;border-top:1px solid #1d2925}
@@ -321,6 +353,9 @@
     .card-head>*{min-width:0}
   }
   @media (max-width:760px){
+    .quick-beta{flex-direction:column}
+    .quick-beta .btn{width:100%}
+    .status-strip{grid-template-columns:1fr}
     .hero{grid-template-columns:1fr;gap:34px;padding:44px 0 44px}
     .hero .card{order:2}
     #tsm-capital-options .tsm-scroll-inner{min-width:720px}
@@ -362,7 +397,8 @@
       <a href="#options">Options</a>
       <a href="#stocks">Stocks</a>
       <a href="#sports">Sports</a>
-      <a href="#access" class="btn btn-primary js-focus">Request beta access</a>
+      <a href="#your-edge">Your Edge</a>
+      <a href="#access" class="btn btn-primary js-focus">Join the founding beta</a>
     </nav>
     <button class="hamb" id="hambBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -381,7 +417,8 @@
     <a href="#options" class="mm-link">Options</a>
     <a href="#stocks" class="mm-link">Stocks</a>
     <a href="#sports" class="mm-link">Sports</a>
-    <a href="#access" class="btn btn-primary btn-lg mm-link js-focus">Request beta access</a>
+    <a href="#your-edge" class="mm-link">Your Edge</a>
+    <a href="#access" class="btn btn-primary btn-lg mm-link js-focus">Join the founding beta</a>
   </div>
 </div>
 
@@ -389,14 +426,24 @@
   <!-- HERO -->
   <section class="wrap hero">
     <div>
-      <span class="eyebrow">Closed beta</span>
-      <h1>Thousands of possibilities.<br><span class="accent">A few decisions</span> worth your money.</h1>
-      <p class="lede"><strong>The Strike Method</strong> filters thousands of market inputs into a small number of complete decisions — <strong>what deserves your capital, where the risk is, and when standing down can protect it.</strong></p>
-      <p class="sub">Most tools give you more to read. TSM does the opposite: it filters out most of the market, tests what survives, and shows you the few situations worth acting on — or tells you plainly when nothing qualifies.</p>
-      <div class="hero-cta">
-        <a href="#access" class="btn btn-primary btn-lg js-focus">Request beta access</a>
-        <span class="cap"><span class="dot"></span> Access is capped while in closed beta.</span>
-      </div>
+      <span class="eyebrow">Founding beta · invitations opening in waves</span>
+      <h1>Know what deserves your money.<br><span class="accent">And what doesn't.</span></h1>
+      <p class="lede"><strong>The Strike Method</strong> turns options, long-term stock, and sports-market research into a few clear, risk-defined decisions — including when the right move is to stand down.</p>
+      <form class="quick-beta" id="heroBetaForm" method="POST" name="beta" aria-label="Join the founding beta">
+        <input type="hidden" name="form-name" value="beta" />
+        <input type="hidden" name="research_variant" value="hero-quick-2026-09" />
+        <input type="hidden" name="utm_source" />
+        <input type="hidden" name="utm_medium" />
+        <input type="hidden" name="utm_campaign" />
+        <input type="hidden" name="utm_content" />
+        <input type="hidden" name="utm_term" />
+        <input type="hidden" name="referrer" />
+        <input type="email" name="email" required placeholder="Enter your email" autocomplete="email" aria-label="Email address" />
+        <button type="submit" class="btn btn-primary btn-lg">Get priority access</button>
+      </form>
+      <div class="hero-success" id="heroSuccess"><strong>You're on the priority list.</strong> Watch your inbox for the next invitation wave.</div>
+      <p class="invite-note"><span class="dot"></span> Small invitation waves while the 30-day product testing is underway.</p>
+      <div class="micro-proof"><span><i></i>Three products in testing</span><span><i></i>Decisions recorded before outcomes</span><span><i></i>Learn what works for you</span></div>
     </div>
 
     <!-- TEASER CARD -->
@@ -437,29 +484,33 @@
   <!-- HOW IT WORKS -->
   <section id="how" class="wrap block">
     <span class="eyebrow">How it works</span>
-    <h2>Filter. Test. Decide.</h2>
-    <p class="kicker">TSM narrows a huge market down to a few complete, checkable calls — and tells you plainly when nothing qualifies.</p>
+    <h2>Less searching. More certainty before you act.</h2>
+    <p class="kicker">Across all three products, the method is the same: filter aggressively, test what survives, and show the complete decision.</p>
     <div class="grid3">
       <div class="feat">
         <span class="n">01</span>
-        <h3>Most of the market gets filtered out</h3>
-        <p>What is easy to find is rarely worth your capital. TSM discards the noise before you ever see it — so you start with candidates, not a firehose.</p>
+        <h3>Filter the noise</h3>
+        <p>Most opportunities never reach you. Weak evidence and poor conditions are rejected first.</p>
       </div>
       <div class="feat">
         <span class="n">02</span>
-        <h3>What survives gets tested</h3>
-        <p>The few candidates left are checked against realistic costs, liquidity, entry price, and the conditions that would make the idea wrong — not just whether the chart looks good.</p>
+        <h3>Test the survivors</h3>
+        <p>The short list is checked against evidence, price, risk, costs, and real-world execution.</p>
       </div>
       <div class="feat">
         <span class="n">03</span>
-        <h3>You get a complete decision</h3>
-        <p>The setup, the risk, and what would change it — or an honest "nothing today." Every call is recorded before the outcome is known, so the track record is verifiable.</p>
+        <h3>Make the decision clear</h3>
+        <p>You see the opportunity, the risk, and what changes the call—or a clear stand-down.</p>
       </div>
     </div>
+    <details class="compact-method">
+      <summary>How the research is verified</summary>
+      <div class="method-body">TSM combines historical and point-in-time data with quantitative, technical, risk, cost, and liquidity checks. Decisions are recorded before outcomes are known so the misses, passes, and stand-downs remain visible.</div>
+    </details>
   </section>
 
   <!-- THE PROBLEM -->
-  <section class="wrap block">
+  <section class="wrap block secondary-explanation" aria-hidden="true">
     <span class="eyebrow">The problem</span>
     <h2>You don't need more alerts. You need fewer, better decisions.</h2>
     <p class="kicker">The hard part of investing isn't finding something to look at — it's separating the few situations worth your capital from the endless stream that isn't.</p>
@@ -490,7 +541,7 @@
   </section>
 
   <!-- THE FOUNDATION — FUNNEL -->
-  <section class="wrap block">
+  <section class="wrap block secondary-explanation" aria-hidden="true">
     <span class="eyebrow">The foundation</span>
     <h2>From thousands of inputs to a few complete decisions.</h2>
     <p class="kicker">TSM runs on a mature research infrastructure. It tests methods across years of historical market data, combines that with point-in-time market inputs, quantitative analysis, technical analysis, and risk/cost/liquidity filters — then rejects most candidates to surface the few that deserve a complete plan. Or it says plainly: nothing today.</p>
@@ -542,16 +593,20 @@
   </section>
 
   <!-- OPTIONS -->
+  <div class="wrap status-strip" aria-label="The Strike Method experience">
+    <div class="status-item"><b>Options decisions</b><span>Complete contracts, entries, risk, and exits</span></div>
+    <div class="status-item"><b>Long-term stocks</b><span>Source-checked ecosystem risk and opportunity</span></div>
+    <div class="status-item"><b>Sports analysis</b><span>Price-aware TAKE, WAIT, PASS, or NO PLAY calls</span></div>
+    <div class="status-item"><b>Your Edge</b><span>The journal and improvement layer across every decision</span></div>
+  </div>
   <section id="options" class="wrap block">
     <span class="eyebrow">Options</span>
     <h2>Finding a moving stock is easy. Knowing which contract is worth buying is the hard part.</h2>
-    <p class="lead-line">You can be right about a stock and still lose on options — because the contract, the entry price, the timing, the liquidity, or the exit was wrong. TSM reviews a broad market, <strong>rejects the weak and untradeable setups</strong>, and turns the strongest survivors into complete plans.</p>
+    <p class="lead-line">TSM rejects weak or untradeable setups, then turns the strongest survivors into <strong>complete plans with the contract, entry, risk, target, and exit already defined.</strong></p>
     <div class="split">
       <div class="copy">
-        <p><strong>The investor's problem.</strong> Options look simple — pick a direction, buy a contract. But the wrong strike, the wrong expiration, a wide spread, or a bad entry can turn a correct call into a loss.</p>
-        <p><strong>What TSM evaluates.</strong> Price structure, volatility, liquidity and spread, entry timing, and the conditions that would prove the idea wrong — all checked before a plan is formed.</p>
-        <p><strong>What you receive.</strong> Not a bare ticker or a one-line alert — the whole decision: the contract, why the setup matters, where to enter, where the idea is wrong, the exit levels, the time horizon, liquidity and cost checks, and how to exit.</p>
-        <p><strong>How that helps.</strong> You know the entry, the risk, the target, and what would prove the idea wrong before you put money to work. And when it doesn't qualify, TSM says <em>no trade</em> — with the reason kept on the record.</p>
+        <p><strong>Why it matters.</strong> You can be right about a stock and still lose because the contract, timing, spread, or exit was wrong.</p>
+        <p><strong>What you receive.</strong> A short, usable decision—not another ticker to research. If the setup fails the test, TSM records a no-trade instead.</p>
         <div class="horizons">
           <div class="hz">
             <div class="hzk">Swing options</div>
@@ -590,7 +645,7 @@
         </div>
         <div class="plan-reject">
           <h4>What this record is — and is not</h4>
-          <p>This is a historical product-record preview from the first official prospective session of the swing-options model, sealed Aug 13, 2026. It shows the fields the system actually stores and verifies: the contract, the decision-time quote, the cost basis, the exit rule, and the model gate score. It is not a current recommendation, not live advice, and not a performance claim. The model identity and exit rule are frozen; the decision has not been settled.</p>
+          <p>Historical product-record preview, sealed before the outcome. It demonstrates the member experience and is not a current recommendation or performance claim.</p>
         </div>
         <div class="notrade"><b>No trade</b> is a valid outcome. When the evidence doesn't clear the bar, TSM sets the name aside and keeps the reason — it does not manufacture a plan to fill a slot.</div>
       </div>
@@ -601,7 +656,7 @@
   <section id="stocks" class="wrap block">
     <span class="eyebrow">Long-Term Stocks</span>
     <h2>See the ecosystem behind every stock.</h2>
-    <p class="lead-line">A stock is not just a ticker. It depends on manufacturers, suppliers, customers, technologies, and regulations that don't show up in a normal portfolio list. <strong>The Stock Ecosystem Map surfaces source-checked relationships within current governed coverage</strong> — so you can find hidden risk and overlooked opportunity.</p>
+    <p class="lead-line">The Stock Ecosystem Map reveals the suppliers, technologies, customers, and regulations behind a holding—so you can see <strong>hidden concentration and overlooked opportunity.</strong></p>
 
     <!-- STOCK ECOSYSTEM MAP — founder-approved Option A visual -->
     <div id="tsm-capital-options">
@@ -663,9 +718,8 @@
 
     <div class="helps">
       <h4>Two ways this helps you</h4>
-      <p><strong>Risk:</strong> Find hidden exposure across holdings before one supplier, regulation, or technology damages several positions at once. A portfolio that looks diversified can carry concentrated risk when multiple holdings quietly depend on the same bottleneck.</p>
-      <p><strong>Opportunity:</strong> Discover the less-obvious companies supporting a major winner — the suppliers, manufacturers, and technology providers that may benefit when demand, capacity, or spending expands. A relationship does not automatically make a company a good investment, but it surfaces candidates worth investigating.</p>
-      <p>Every connection traces back to a source you can check. This is a preview of the map, not a claim that it predicts returns.</p>
+      <p><strong>Risk:</strong> Spot when several holdings quietly depend on the same supplier, technology, or regulation.</p>
+      <p><strong>Opportunity:</strong> Discover less-obvious companies supporting a major winner. Every displayed connection traces to a source you can inspect.</p>
     </div>
   </section>
 
@@ -673,14 +727,12 @@
   <section id="sports" class="wrap block">
     <span class="eyebrow">Sports Analysis</span>
     <h2>Most people react to a headline. TSM checks the variables that change the outcome.</h2>
-    <p class="lead-line">A team name or a price is not enough. TSM compares the factors its current MLB model can verify — probable starters, bullpen and team offense, park and home-field context, market price, liquidity, fees, and correlated exposure — to the price being offered. Separate diagnostics are now testing full lineups, transaction-based injury and late-scratch evidence, weather, and platoon fit before those inputs are allowed to influence an official decision.</p>
+    <p class="lead-line">TSM compares game evidence with the price actually available, then returns a clear <strong>TAKE, WAIT, PASS, or NO PLAY</strong> decision.</p>
     <div class="split">
       <div class="copy">
-        <p><strong>The investor's problem.</strong> Most people react to a headline, a team name, or a price. They miss the variables that can change the outcome — a late pitching change, weather, park factors, or a price that looks good until fees and liquidity eat the edge.</p>
-        <p><strong>What the current official model evaluates.</strong> Probable starting pitchers and recent form, bullpen strength, team offense, park and home-field context, executable market price, liquidity, fees, and correlated exposure. Full lineups, transaction-based injury and late-scratch evidence, weather, and platoon fit are being validated in a separate diagnostic lane. They do not become official decision gates until prospective evidence proves the feeds are complete and reliable.</p>
-        <p><strong>What you receive.</strong> A clear evaluation with the estimated probability, the market price, whether the difference is large enough to matter after costs, and a TAKE, WAIT, PASS, or NO_PLAY decision — with the reason recorded.</p>
-        <p><strong>How that helps.</strong> You stop reacting to headlines and start evaluating whether the offered price actually leaves a margin. When it doesn't, TSM says pass — protecting your bankroll from bets that look good but disappear after costs.</p>
-        <p style="color:var(--muted-2);font-size:13px;margin-top:18px">Currently active for MLB moneyline. Paper trading only — no real-money results. Additional sports and data sources are planned but not yet operational.</p>
+        <p><strong>Why it matters.</strong> A promising matchup can lose its edge after a pitching change, fees, liquidity, or an unfavorable market price.</p>
+        <p><strong>What you receive.</strong> The estimated probability, market price, edge after costs, and the reason behind the decision.</p>
+        <p style="color:var(--muted-2);font-size:13px;margin-top:18px">In 30-day paper testing for MLB moneyline. No real-money results or recommendations.</p>
       </div>
 
       <!-- SPORTS DECISION CARD -->
@@ -723,6 +775,27 @@
     </div>
   </section>
 
+  <!-- YOUR EDGE — CROSS-PRODUCT JOURNAL + IMPROVEMENT LAYER -->
+  <section id="your-edge" class="wrap block">
+    <span class="eyebrow">Your Edge</span>
+    <h2>The decision is only the beginning.</h2>
+    <p class="lead-line">Your Edge turns your journal into an improvement system. It records what you considered, what you acted on, whether you followed the plan, and what happened next—across Options, Stocks, and Sports.</p>
+    <div class="split">
+      <div class="copy">
+        <p><strong>See what actually works for you.</strong> Find the setups, conditions, and time horizons where your process is strongest.</p>
+        <p><strong>Catch costly patterns.</strong> Surface late entries, broken rules, overtrading, and the situations where standing down helped.</p>
+        <p><strong>Improve with evidence.</strong> Turn every recorded decision into a clearer focus for the next one.</p>
+      </div>
+      <div class="edge-card" aria-label="Illustrative Your Edge monthly review">
+        <div class="card-head"><span class="t">Your Edge · monthly review</span><span class="chip">Illustrative</span></div>
+        <div class="edge-metric"><div class="em-k">Strongest pattern</div><div class="em-v"><strong>Planned swing setups</strong> held for 3–5 sessions</div></div>
+        <div class="edge-metric"><div class="em-k">Most common leak</div><div class="em-v">Entries taken <strong>outside the planned zone</strong></div></div>
+        <div class="edge-metric"><div class="em-k">Discipline signal</div><div class="em-v">Stand-downs kept weak setups out of the journal</div></div>
+        <div class="edge-focus"><b>Your next focus:</b> fewer late entries; only act inside the plan.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ACCESS / WAITLIST -->
   <section id="access">
     <div class="wrap">
@@ -731,11 +804,11 @@
       </div>
       <div class="access-card">
         <div id="formView">
-          <h2>See the decisions before access opens.</h2>
-          <p class="sub">TSM is opening the beta in small, controlled groups. Join the waitlist for early access, product previews, and the first beta invitations.</p>
+          <h2>Get in before public access opens.</h2>
+          <p class="sub">Options, long-term stocks, and sports analysis are now in a focused 30-day test. Join the priority list for product previews and the next small wave of invitations.</p>
           <div class="price">
-            <span class="beta-label">Limited Founding Beta Invitations</span>
-            <span class="beta-note">Founding members will receive preferred beta pricing before public launch.</span>
+            <span class="beta-label">Founding beta · limited invitation waves</span>
+            <span class="beta-note">Early members receive preferred beta pricing and help shape what ships after the test.</span>
           </div>
 
           <form class="beta" id="betaForm" method="POST" name="beta">
@@ -754,47 +827,17 @@
               <input id="email" type="email" name="email" required placeholder="you@email.com" autocomplete="email" />
             </div>
             <div class="field">
-              <label for="name">Name <span style="color:var(--muted-2)">(optional)</span></label>
-              <input id="name" type="text" name="name" placeholder="First name" autocomplete="given-name" />
-            </div>
-            <div class="field">
-              <label for="primary_interest">What do you want TSM to help with? <span aria-hidden="true">*</span></label>
-              <select id="primary_interest" name="primary_interest" required>
-                <option value="" selected disabled>Select one</option>
+              <label for="primary_interest">What do you want to see first? <span style="color:var(--muted-2)">(optional)</span></label>
+              <select id="primary_interest" name="primary_interest">
+                <option value="" selected>Choose a product</option>
                 <option value="options">Options decisions</option>
                 <option value="long_term">Long-term stock research</option>
                 <option value="sports">Sports and event-market analysis</option>
+                <option value="your_edge">Your Edge journal and improvement</option>
                 <option value="multiple">More than one</option>
               </select>
             </div>
-            <div class="field">
-              <label for="biggest_challenge">What is your biggest challenge? <span aria-hidden="true">*</span></label>
-              <select id="biggest_challenge" name="biggest_challenge" required>
-                <option value="" selected disabled>Select one</option>
-                <option value="too_much_data">Too much data and too many signals</option>
-                <option value="complete_plan">Turning an idea into a complete plan</option>
-                <option value="trust">Knowing which tools or signals to trust</option>
-                <option value="discipline">Knowing when to pass or stand down</option>
-                <option value="track_record">Tracking what actually works over time</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="current_tool_spend">What do you currently spend on research tools? <span style="color:var(--muted-2)">(optional)</span></label>
-              <select id="current_tool_spend" name="current_tool_spend">
-                <option value="" selected>Select one</option>
-                <option value="0">$0 per month</option>
-                <option value="1_49">$1–$49 per month</option>
-                <option value="50_99">$50–$99 per month</option>
-                <option value="100_199">$100–$199 per month</option>
-                <option value="200_plus">$200+ per month</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="trades">Anything else about how you invest? <span style="color:var(--muted-2)">(optional)</span></label>
-              <input id="trades" type="text" name="trades" placeholder="e.g. swing options, long-term stocks, Kalshi" />
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg">Request beta access</button>
+            <button type="submit" class="btn btn-primary btn-lg">Join the priority list</button>
             <p class="formerr" id="formErr">Something went wrong — please try again, or email us directly.</p>
           </form>
           <p class="formnote">The Strike Method is an educational decision-support tool, not financial advice. Your email is used to contact you about beta access. See our <a href="/legal/privacy.html" style="color:var(--muted);text-decoration:underline">privacy policy</a> and <a href="/legal/terms.html" style="color:var(--muted);text-decoration:underline">terms</a>.</p>
@@ -824,7 +867,7 @@
 </footer>
 
 <script>
-  // Focus the email field when any "Request beta access" control is used
+  // Focus the email field when any beta-access control is used
   document.querySelectorAll('.js-focus').forEach(function(a){
     a.addEventListener('click', function(){
       setTimeout(function(){ var e=document.getElementById('email'); if(e) e.focus({preventScroll:true}); }, 420);
@@ -855,10 +898,10 @@
     var utm_content=params.get('utm_content')||'';
     var utm_term=params.get('utm_term')||'';
     var referrer=document.referrer||'direct';
-    var set=function(id,val){var el=document.getElementById(id);if(el&&val)el.value=val;};
-    set('utm_source',utm_source);set('utm_medium',utm_medium);set('utm_campaign',utm_campaign);
-    set('utm_content',utm_content);set('utm_term',utm_term);set('referrer_field',referrer);
-    set('research_variant',utm_content||'site-control-2026-09');
+    var setAll=function(name,val){if(!val)return;document.querySelectorAll('[name="'+name+'"]').forEach(function(el){el.value=val;});};
+    setAll('utm_source',utm_source);setAll('utm_medium',utm_medium);setAll('utm_campaign',utm_campaign);
+    setAll('utm_content',utm_content);setAll('utm_term',utm_term);setAll('referrer',referrer);
+    if(utm_content) setAll('research_variant',utm_content);
   }
   captureAttribution();
   window.addEventListener('DOMContentLoaded', captureAttribution);
@@ -890,29 +933,30 @@
   })();
 
   // AJAX submit to Netlify Forms -> inline success (no page redirect)
-  var form = document.getElementById('betaForm');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    captureAttribution();
-    var btn = form.querySelector('button[type=submit]');
-    var err = document.getElementById('formErr');
-    err.style.display = 'none';
-    btn.disabled = true; btn.textContent = 'Sending…';
-
-    var data = new URLSearchParams(new FormData(form)).toString();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: data
-    }).then(function(res){
-      if(!res.ok) throw new Error('bad response');
-      document.getElementById('formView').style.display = 'none';
-      document.getElementById('successView').style.display = 'block';
-      document.getElementById('successView').scrollIntoView({behavior:'smooth', block:'center'});
-    }).catch(function(){
-      err.style.display = 'block';
-      btn.disabled = false; btn.textContent = 'Request beta access';
+  function wireBetaForm(form, onSuccess){
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      captureAttribution();
+      var btn=form.querySelector('button[type=submit]');
+      var original=btn.textContent;
+      var err=document.getElementById('formErr');
+      if(err) err.style.display='none';
+      btn.disabled=true; btn.textContent='Joining…';
+      var data=new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data})
+        .then(function(res){if(!res.ok) throw new Error('bad response');onSuccess();})
+        .catch(function(){if(err) err.style.display='block';btn.disabled=false;btn.textContent=original;});
     });
+  }
+  wireBetaForm(document.getElementById('heroBetaForm'), function(){
+    document.getElementById('heroBetaForm').style.display='none';
+    document.getElementById('heroSuccess').style.display='block';
+  });
+  wireBetaForm(document.getElementById('betaForm'), function(){
+    document.getElementById('formView').style.display='none';
+    document.getElementById('successView').style.display='block';
+    document.getElementById('successView').scrollIntoView({behavior:'smooth',block:'center'});
   });
 </script>
 </body>
