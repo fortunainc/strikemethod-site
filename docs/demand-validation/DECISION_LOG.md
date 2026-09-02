@@ -6,4 +6,4 @@
 | D-0002 | 2026-09-01 | Keep swing-options decision compression as the leading hypothesis, not a verdict | Founder allocation hypothesis; current product framing | Averaging all lanes together | Lane-specific response, product-use, and payment evidence |
 | D-0003 | 2026-09-01 | Do not begin message comparisons until qualified form/variant deployment is verified | E-0002, E-0003 | Interpreting old-form signups as qualified demand | Live field and attribution verification passes |
 | D-0004 | 2026-09-01 | Do not expand product claims or payment collection | E-0005–E-0008 | Treating previews, shadow, paper, or historical records as certification | Production truth and commercial readiness are verified |
-
+| D-0005 | 2026-09-01 | Prioritize Options interviews around overload-to-complete-plan and discipline/receipts; retain Sports as a secondary category opportunity; do not raise Capital confidence | E-0009–E-0011 | Declaring a winner from competitor revenue or public anecdotes | Qualified TSM interview/product/payment behavior |

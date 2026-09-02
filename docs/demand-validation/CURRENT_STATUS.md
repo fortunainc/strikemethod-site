@@ -1,11 +1,11 @@
 # Current status
 
-Last reconciled: 2026-09-01 16:58 America/Los_Angeles
+Last reconciled: 2026-09-01 18:00 America/Los_Angeles
 
 ## Executive truth
 
 - Commercial demand is **not demonstrated** for Options, Capital, or Sports. No verified qualified-response, interview, product-usage, deposit, payment, or retention dataset is available in this workspace.
-- Category-level interest and competitor activity remain research hypotheses, not TSM demand evidence.
+- Current category-spend evidence is now established in all three lanes. Options has the best proposition-level pain alignment: overload, incomplete interpretation, discipline, and recordkeeping recur in public samples, while paid adjacent products span roughly $35–$99/month. This is still not TSM demand evidence.
 - The public marketing repository is authoritative for intended site source at commit `6b5bb4fc9560b11253c9a65b673611f2a3f0707c`.
 - The live site at `https://getstrikemethod.com/` is served by Netlify but is stale: it still exposes the old three-field beta form and does not show the qualified-demand fields merged in commit `6b5bb4f`.
 - `fortunainc/tsm-production` could not be cloned without GitHub credentials. Engine/product readiness therefore remains unverified, and marketing claims must not be expanded.
@@ -29,11 +29,10 @@ Last reconciled: 2026-09-01 16:58 America/Los_Angeles
 
 | Lane | Confidence | Basis | Missing gate evidence |
 |---|---:|---|---|
-| Options | 1/5 | Initial wedge hypothesis plus customer-facing proposition; no TSM behavioral evidence | 30 qualified respondents, 10 product evaluators, 5 authorized commitments, retention |
-| Capital | 1/5 | Customer-facing concept only | Same, independently sampled |
-| Sports | 1/5 | Customer-facing concept only; paper/shadow limitations | Same, independently sampled |
+| Options | 2/5 | Current category spend plus repeated public pain aligns with decision compression, rejection discipline and receipts; no TSM behavioral evidence | 30 qualified respondents, 10 product evaluators, 5 authorized commitments, retention |
+| Capital | 1/5 | Paid research category exists, but hidden-dependency pain and TSM differentiation are not yet evidenced | Same, independently sampled |
+| Sports | 2/5 category / 1/5 launch | Strong paid analytics category and price/switching pain; TSM remains paper/shadow and untested | Same, independently sampled; production readiness |
 
 ## Highest-value next task
 
-Deploy commit `6b5bb4f` through the authorized Netlify pipeline, then verify form detection, field recording, attribution, validation, honeypot, mobile/desktop behavior, and success/error states without destroying existing submissions. Separately provide read access to the production repository and aggregate form/analytics data.
-
+Obtain access to deploy/aggregate data. In parallel, turn the strongest Options pain cluster into a permission-safe qualified interview and price-tradeoff recruitment package; do not treat public anecdotes as respondents.
