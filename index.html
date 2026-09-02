@@ -847,7 +847,7 @@
   })();
 
   // Capture UTM parameters and referrer
-  (function(){
+  function captureAttribution(){
     var params=new URLSearchParams(window.location.search);
     var utm_source=params.get('utm_source')||'direct';
     var utm_medium=params.get('utm_medium')||'';
@@ -859,7 +859,10 @@
     set('utm_source',utm_source);set('utm_medium',utm_medium);set('utm_campaign',utm_campaign);
     set('utm_content',utm_content);set('utm_term',utm_term);set('referrer_field',referrer);
     set('research_variant',utm_content||'site-control-2026-09');
-  })();
+  }
+  captureAttribution();
+  window.addEventListener('DOMContentLoaded', captureAttribution);
+  window.addEventListener('load', captureAttribution);
 
   // Mobile menu: open/close with keyboard + focus + Escape + click-outside
   (function(){
@@ -890,6 +893,7 @@
   var form = document.getElementById('betaForm');
   form.addEventListener('submit', function(e){
     e.preventDefault();
+    captureAttribution();
     var btn = form.querySelector('button[type=submit]');
     var err = document.getElementById('formErr');
     err.style.display = 'none';
