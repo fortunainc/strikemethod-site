@@ -1,6 +1,6 @@
 # Current status
 
-Last reconciled: 2026-09-03 01:30 America/Los_Angeles
+Last reconciled: 2026-09-03 07:31 America/Los_Angeles
 
 ## Executive truth
 
@@ -8,7 +8,7 @@ Last reconciled: 2026-09-03 01:30 America/Los_Angeles
 - Current category-spend evidence is now established in all three lanes. Options has the best proposition-level pain alignment: overload, incomplete interpretation, discipline, and recordkeeping recur in public samples, while paid adjacent products span roughly $35–$99/month. This is still not TSM demand evidence.
 - The public marketing repository advanced after the verified demand deploy to `8575a36`. The live site now matches that newer two-form experience, but the customer-visible forms capture only email plus optional product interest; challenge and current-tool-spend remain only in Netlify's hidden detection blueprint. This is a **qualified-demand regression**, not evidence that Netlify lost the fields.
 - A minimal repair is prepared and pushed at `fix/restore-qualified-demand-capture-2026-09` commit `4c815fa`. It now includes site main's latest `e4b9f76` positioning changes, preserves the low-friction hero form, labels it `capture_depth=quick`, and restores a distinct footer form with required lane/challenge plus optional spend, labeled `capture_depth=qualified`.
-- Netlify's privacy-safe aggregate remains three total submissions, with the last submission on 2026-08-14. No new behavior has arrived since the qualified-demand work began; there is therefore still no TSM-specific response evidence to analyze.
+- Netlify's privacy-safe aggregate remains three total submissions, with the last submission on 2026-08-14 as rechecked at 07:31 PT on 2026-09-03. No new behavior has arrived since the qualified-demand work began; there is therefore still no TSM-specific response evidence to analyze.
 - Four Options recruitment/message cells, attributed URLs, channel sequencing, interpretation rules, and an interview invitation are execution-ready in `OPTIONS_RECRUITMENT_PACK.md`; none has been published or sent.
 - Netlify Web Analytics is available under the current team plan but disabled. Consequently landing-page views, visitors, and acquisition sources are not being measured server-side, and qualified completion rates cannot yet be calculated even after the form repair.
 - Static production verification passes and the deployed HTML contains the corrected attribution capture. The controlled in-app browser does not execute the site's custom scripts, so it cannot provide an independent runtime assertion of hidden-field population or AJAX success; no production test submission was fabricated because it would contaminate customer evidence.
