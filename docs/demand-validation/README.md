@@ -6,3 +6,4 @@ Evidence labels: `observed`, `reported`, `inferred`, or `experimentally_demonstr
 
 Never record customer PII here. Submission-level data belongs only in the authorized form/analytics system; this workspace stores aggregates and redacted research evidence.
 
+Execution materials include `OPTIONS_INTERVIEW_AND_PRICE_TEST.md` and `OPTIONS_RECRUITMENT_PACK.md`.
